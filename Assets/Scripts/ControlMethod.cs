@@ -21,7 +21,7 @@ public class ControlMethod : MonoBehaviour {
 				|| Input.GetAxis ("Horizontal") != 0f
 				|| Input.GetAxis ("Vertical") != 0f) {
 				joystick = false;
-				Debug.Log ("klavye gecildi");
+				//Debug.Log ("klavye gecildi");
 
 			}
 		} else {
@@ -34,7 +34,7 @@ public class ControlMethod : MonoBehaviour {
 				|| Input.GetAxis ("Horizontal_Pad") != 0f
 				|| Input.GetAxis ("Vertical_Pad") != 0f) {
 				joystick = true;
-				Debug.Log ("joy pad'e gecildi");
+				//Debug.Log ("joy pad'e gecildi");
 
 			}
 

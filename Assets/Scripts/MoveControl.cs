@@ -45,7 +45,8 @@ public class MoveControl : MonoBehaviour {
 		if (PyhsicControl) {
 			_CharacterRigidbody2D.AddForce (moveDirection * speed * 10f);
 		} else {
-			_CharacterTransform.Translate(moveDirection*speed*Time.deltaTime);
+			_CharacterTransform.Translate(moveDirection*speed*Time.deltaTime,Space.World);
+
 		}
 		//
 
