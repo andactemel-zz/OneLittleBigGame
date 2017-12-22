@@ -36,7 +36,7 @@ Just a standart Unity Project. To open the project:
  - [Unity](https://unity3d.com) Version: Unity 2017.3
 ### Development Environment
 - Software
- - Windows 10 (2017 December)
+  - Windows 10 (2017 December)
 - Hardware
   - AMD A7890K CPU,
   - Asus DUAL-RX460-2G Video Card
@@ -47,6 +47,6 @@ Just a standart Unity Project. To open the project:
 This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License - see the [LICENSE.md](LICENSE.md) file for details
 ## 8.Thanks To:
 - @gazialankus, for introduced me to Unity,
-- Mr. Mike Geig, for[this](https://unity3d.com/learn/tutorials/topics/2d-game-creation/top-down-2d-game-basics)  little video which gave me courage to start the project,
+- Mr. Mike Geig, for [this](https://unity3d.com/learn/tutorials/topics/2d-game-creation/top-down-2d-game-basics)  little video which gave me courage to start the project,
 
 
