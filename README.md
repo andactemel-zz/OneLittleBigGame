@@ -5,11 +5,11 @@ This game project is a 2D Top Down(90 Degree Camera Angle) Rpg Game.
 ## 3.Road Map
 ### 1.Mecanics
 #### 1.Finished Mecanics
--[x] Character Movement With Physics
--[x] Character Movement With transform manipulation
--[x] User Input Chooser(Keyboard or Gamepad)
--[x] Character Rotation
--[x] Camera Follow the Character(Basic) 
+- [x] Character Movement With Physics
+- [x] Character Movement With transform manipulation
+- [x] User Input Chooser(Keyboard or Gamepad)
+- [x] Character Rotation
+- [x] Camera Follow the Character(Basic) 
 #### 2.In-Development Mecanics
 #### 3.Planned Mecanics
 ### 2.Graphics
@@ -42,7 +42,7 @@ Just a standart Unity Project. To open the project:
   -Asus DUAL-RX460-2G Video Card
   -8 GB Corsair 2400 Mhz DDR 3 Ram
 ## 6.Authors
- -Andaç Temel-Creator-@andactemel
+ - Andaç Temel-Creator-@andactemel
 ## 7.Licence
 This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License - see the [LICENSE.md](LICENSE.md) file for details
 ## 8.Thanks To:
