@@ -27,7 +27,7 @@ This game project is a 2D Top Down(90 Degree Camera Angle) Rpg Game.
 ## 4.Usage
 Just a standart Unity Project. To open the project:
 ### Prerequisites
-[Download Unity and Install Unity] (https://unity3d.com/get-unity/download)
+[Download Unity and Install Unity](https://unity3d.com/get-unity/download)
 ### Installing
 - Clone or Download the projet,
 - Open Project Folder with Unity
