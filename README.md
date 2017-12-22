@@ -46,7 +46,7 @@ Just a standart Unity Project. To open the project:
 ## 7.Licence
 This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License - see the [LICENSE.md](LICENSE.md) file for details
 ## 8.Thanks To:
-- [Gazihan Alankuş](@gazialankus), for introduced me to Unity,
+- [Gazihan Alankuş](https://github.com/gazialankus), for introduced me to Unity,
 - Mr. Mike Geig, for [this](https://unity3d.com/learn/tutorials/topics/2d-game-creation/top-down-2d-game-basics)  little video which gave me courage to start the project,
 
 
