@@ -29,18 +29,18 @@ Just a standart Unity Project. To open the project:
 ### Prerequisites
 [Download Unity and Install Unity] (https://unity3d.com/get-unity/download)
 ### Installing
--Clone or Download the projet,
--Open Project Folder with Unity
+- Clone or Download the projet,
+- Open Project Folder with Unity
 ## 5.Build With
 ### Development Softwares
- -[Unity](https://unity3d.com) Version: Unity 2017.3
+ - [Unity](https://unity3d.com) Version: Unity 2017.3
 ### Development Environment
--Software
- -Windows 10 (2017 December)
--Hardware
-  -AMD A7890K CPU,
-  -Asus DUAL-RX460-2G Video Card
-  -8 GB Corsair 2400 Mhz DDR 3 Ram
+- Software
+ - Windows 10 (2017 December)
+- Hardware
+  - AMD A7890K CPU,
+  - Asus DUAL-RX460-2G Video Card
+  - 8 GB Corsair 2400 Mhz DDR 3 Ram
 ## 6.Authors
  - Andaç Temel-Creator-@andactemel
 ## 7.Licence
