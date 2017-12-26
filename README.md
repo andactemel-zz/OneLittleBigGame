@@ -11,7 +11,10 @@ This game project is a 2D Top Down(90 Degree Camera Angle) Rpg Game.
 - [x] Character Rotation
 - [x] Camera Follow the Character(Basic) 
 #### 2.In-Development Mecanics
+- [ ] Character can try to lift all items
+- [ ] Character can try to eat all items
 #### 3.Planned Mecanics
+- [ ] Character can try to wear all items
 ### 2.Graphics
 #### 1.Finished Graphics
 #### 2.In-Development Graphics
