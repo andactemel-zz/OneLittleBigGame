@@ -25,7 +25,7 @@
  		- ATTACK POWER 0-DoubleMax (Double)
 		
 
-##FUNCTIONS
+## FUNCTIONS
 
 **Eating Function**
 
