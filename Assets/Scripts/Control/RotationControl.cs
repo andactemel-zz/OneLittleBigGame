@@ -21,7 +21,7 @@ public class RotationControl : MonoBehaviour {
 			    || ((Input.GetAxis ("Mouse Y_Pad") < 1.1f && Input.GetAxis ("Mouse Y_Pad") > -1.1f) && (Input.GetAxis ("Mouse Y_Pad") > 0.1f || Input.GetAxis ("Mouse Y_Pad") < -0.1f))) {
 
 				Vector3 LookDirection = new Vector3 (transform.position.x + Input.GetAxis ("Mouse X_Pad"), transform.position.y - Input.GetAxis ("Mouse Y_Pad"), -10f);
-				Debug.Log (LookDirection);
+				//Debug.Log (LookDirection);
 				Quaternion rotati = Quaternion.LookRotation (transform.position - LookDirection, Vector3.forward);
 				transform.rotation = rotati;
 				transform.eulerAngles = new Vector3 (0, 0, transform.localEulerAngles.z);
@@ -32,7 +32,7 @@ public class RotationControl : MonoBehaviour {
 		} else {
 			
 			var mousePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			Debug.Log (mousePosition);
+			//Debug.Log (mousePosition);
 			Quaternion rotati = Quaternion.LookRotation (transform.position - mousePosition, Vector3.forward);
 			transform.rotation = rotati;
 			transform.eulerAngles = new Vector3 (0, 0, transform.localEulerAngles.z);
