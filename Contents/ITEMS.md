@@ -28,5 +28,5 @@
 ##FORMULAS
 
 - **Eating Formula**
-	Eating Time=Volume/Biting Volume*hardness*hardness
+Eating Time=Volume/Biting Volume*hardness*hardness
 	
