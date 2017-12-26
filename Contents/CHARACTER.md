@@ -1,4 +1,4 @@
-# CHARACTER Unique Id="character"
+# CHARACTER (Unique Id="character")
 ## STATIC
 Biting Volume: cm3 (float) (Represent the character Mouth Space) Unique Id="bitingVolume"
 Hand Space: cm (float) (For Holding; it means character can carry and hold items smaller than Hand Space) Unique Id="handSpace"
