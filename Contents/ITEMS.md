@@ -1,4 +1,4 @@
-# ITEMS Unique Id="item"
+# ITEMS (Unique Id="item")
 ## GENERAL INFO
 - Every item in the game has general specs.
 - Every item can be used as weapon if character can lift the item and hold the item.
