@@ -4,7 +4,8 @@
 | General Name  |    GamePad    |    Keyboard  | 
 | ------------- | ------------- | -------------
 | Select        |        A      |      SPACE   |
-| Dissmiss      |        B      |      ESC     |
+| Dismiss      |        B      |      ESC     |
+| Attack | X | Left Mouse Button |
 
 
 - When Character near an interactable item 
