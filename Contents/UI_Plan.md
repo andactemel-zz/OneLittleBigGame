@@ -1,13 +1,14 @@
 # UI Plan
 
- ## UI Buttons 
+ ## 1.UI Buttons 
 | General Name  |    GamePad    |    Keyboard  | 
 | ------------- | ------------- | -------------
 | Select        |        A      |      SPACE   |
 | Dismiss      |        B      |      ESC     |
 | Attack | X | Left Mouse Button |
 
-
+## 2.UI Windows
+### Item Interaction Window
 - When Character near an interactable item 
   - Select Button will appear in on the top of that item
   - item edges will glow according when inter action possible
