@@ -15,7 +15,7 @@
 
 1. ITEMS
 	- SPECS:
-		- Weight: gr (double) Unique Id="wieght"
+		- Weight: gr (double) Unique Id="weight"
 		- Height: cm (double) Unique Id="height"
 		- Width: cm  (double) Unique Id="width"
 		- Depth: cm  (double) Unique Id="depth"
