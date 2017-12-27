@@ -5,8 +5,10 @@ using UnityEngine;
 public class ControlMethod : MonoBehaviour {
 
 	public bool joystick=false;
-	// Use this for initialization
-	void Start () {
+    public UiControlChanger _UiControlChanger;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 
@@ -21,9 +23,11 @@ public class ControlMethod : MonoBehaviour {
 				|| Input.GetAxis ("Horizontal") != 0f
 				|| Input.GetAxis ("Vertical") != 0f) {
 				joystick = false;
-				//Debug.Log ("klavye gecildi");
+                //Debug.Log ("klavye gecildi");
+                _UiControlChanger.UpdateUIAccordingToControlChange(joystick);
 
-			}
+
+            }
 		} else {
 			
 			if ( ((Input.GetAxis ("Mouse X_Pad")  <1.1f && Input.GetAxis ("Mouse X_Pad")  >-1.1f) && (Input.GetAxis ("Mouse X_Pad")>0.1f || Input.GetAxis ("Mouse X_Pad")<-0.1f))
@@ -34,9 +38,10 @@ public class ControlMethod : MonoBehaviour {
 				|| Input.GetAxis ("Horizontal_Pad") != 0f
 				|| Input.GetAxis ("Vertical_Pad") != 0f) {
 				joystick = true;
-				//Debug.Log ("joy pad'e gecildi");
+                //Debug.Log ("joy pad'e gecildi");
+                _UiControlChanger.UpdateUIAccordingToControlChange(joystick);
 
-			}
+            }
 
 
 		}

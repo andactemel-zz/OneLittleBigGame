@@ -18,8 +18,8 @@ This game project is a 2D Top Down(90 Degree Camera Angle) Rpg Game.
 ### 2.Graphics
 #### 1.Finished Graphics
 #### 2.In-Development Graphics
-#### 3.Planned Graphics
 - [ ] Item interaction Window
+#### 3.Planned Graphics
 ### 3.Sounds
 #### 1.Finished Sounds
 #### 2.In-Development Sounds
