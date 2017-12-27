@@ -1,6 +1,6 @@
 # UI Plan
 
- ##UI Buttons 
+ ## UI Buttons 
 | General Name  |    GamePad    |    Keyboard  | 
 | ------------- | ------------- | -------------
 | Select        |        A      |      SPACE   |
