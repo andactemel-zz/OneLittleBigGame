@@ -57,4 +57,7 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 - [Gazihan Alankuş](https://github.com/gazialankus), for introduced me to Unity,
 - Mr. Mike Geig, for [this](https://unity3d.com/learn/tutorials/topics/2d-game-creation/top-down-2d-game-basics)  little video which gave me courage to start the project,
 
+## 9 Used Assest:
+- SquarePug, For Top down Character Pack: [Pack Link](https://opengameart.org/content/top-down-shooter-character)
+
 
