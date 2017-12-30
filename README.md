@@ -70,7 +70,7 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 - Mr. Mike Geig, for [this](https://unity3d.com/learn/tutorials/topics/2d-game-creation/top-down-2d-game-basics)  little video which gave me courage to start the project,
 
 ## 9.Used Assest:
-- SquarePug, For Top down Character Pack: [Pack Link](https://opengameart.org/content/top-down-shooter-character)
+- [SquarePug](https://opengameart.org/users/square-pug-games), For Top down Character Pack: [Pack Link](https://opengameart.org/content/top-down-shooter-character)
 - [Buch](https://opengameart.org/users/buch),For First Sword Art [Sword](https://opengameart.org/content/sword-1)
 - [Bluce](https://opengameart.org/users/bluce),For First Axe Art [Axe](https://opengameart.org/content/flame-ice-axe)
 
