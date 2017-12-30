@@ -38,6 +38,8 @@ This game project is a 2D Top Down(90 Degree Camera Angle) Rpg Game.
 #### 3.Planned Animations
 - [ ] Character Right Strafe
 - [ ] Character Left Strafe
+- [ ] Character Attack Melee , Right Hand with Weapon
+- [ ] Character Attack Melee , Both Hand with Weapon
 ### 5.Scenario
 #### 1.Finished Scenario
 #### 2.In-Development Scenario
