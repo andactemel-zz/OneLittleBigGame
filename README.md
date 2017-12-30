@@ -15,6 +15,8 @@ This game project is a 2D Top Down(90 Degree Camera Angle) Rpg Game.
 - [ ] Character can try to eat all items
 #### 3.Planned Mecanics
 - [ ] Character can try to wear all items
+- [ ] Character Can Attack Melee , Right Hand with Weapon
+- [ ] Character Can Attack Ranged, Both Hand with Weapon
 ### 2.Graphics
 #### 1.Finished Graphics
 #### 2.In-Development Graphics
@@ -28,7 +30,15 @@ This game project is a 2D Top Down(90 Degree Camera Angle) Rpg Game.
 - [ ] Item interection Menu Select Sound
 - [ ] Item interection Menu Change Sound
 - [ ] Item interection Menu Close Sound
-### 4.Scenario
+### 4.Animations
+#### 1.Finished Animations
+#### 2.In-Development Animations
+- [ ] Character Walking Forward
+- [ ] Character Walking Backward
+#### 3.Planned Animations
+- [ ] Character Right Strafe
+- [ ] Character Left Strafe
+### 5.Scenario
 #### 1.Finished Scenario
 #### 2.In-Development Scenario
 #### 3.Planned Scenario
