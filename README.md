@@ -15,6 +15,8 @@ This game project is a 2D Top Down(90 Degree Camera Angle) Rpg Game.
 - [ ] Character can try to eat all items
 #### 3.Planned Mecanics
 - [ ] Character can try to wear all items
+- [ ] Character Can Attack Melee , Right Hand with Weapon
+- [ ] Character Can Attack Ranged, Both Hand with Weapon
 ### 2.Graphics
 #### 1.Finished Graphics
 #### 2.In-Development Graphics
@@ -28,7 +30,17 @@ This game project is a 2D Top Down(90 Degree Camera Angle) Rpg Game.
 - [ ] Item interection Menu Select Sound
 - [ ] Item interection Menu Change Sound
 - [ ] Item interection Menu Close Sound
-### 4.Scenario
+### 4.Animations
+#### 1.Finished Animations
+#### 2.In-Development Animations
+- [ ] Character Walking Forward
+- [ ] Character Walking Backward
+#### 3.Planned Animations
+- [ ] Character Right Strafe
+- [ ] Character Left Strafe
+- [ ] Character Attack Melee , Right Hand with Weapon
+- [ ] Character Attack Melee , Both Hand with Weapon
+### 5.Scenario
 #### 1.Finished Scenario
 #### 2.In-Development Scenario
 #### 3.Planned Scenario
@@ -58,6 +70,8 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 - Mr. Mike Geig, for [this](https://unity3d.com/learn/tutorials/topics/2d-game-creation/top-down-2d-game-basics)  little video which gave me courage to start the project,
 
 ## 9.Used Assest:
-- SquarePug, For Top down Character Pack: [Pack Link](https://opengameart.org/content/top-down-shooter-character)
+- [SquarePug](https://opengameart.org/users/square-pug-games), For Top down Character Pack: [Pack Link](https://opengameart.org/content/top-down-shooter-character)
+- [Buch](https://opengameart.org/users/buch),For First Sword Art [Sword](https://opengameart.org/content/sword-1)
+- [Bluce](https://opengameart.org/users/bluce),For First Axe Art [Axe](https://opengameart.org/content/flame-ice-axe)
 
 
