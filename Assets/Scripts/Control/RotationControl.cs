@@ -24,8 +24,9 @@ public class RotationControl : MonoBehaviour {
 				Vector3 LookDirection = new Vector3 (transform.position.x + Input.GetAxis ("Mouse X_Pad"), transform.position.y - Input.GetAxis ("Mouse Y_Pad"), -10f);
 				//Debug.Log (LookDirection);
 				Quaternion rotati = Quaternion.LookRotation (transform.position - LookDirection, Vector3.forward);
-				transform.rotation = rotati;
-				transform.eulerAngles = new Vector3 (0, 0, transform.localEulerAngles.z);
+                //.rotation = rotati;
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotati, 0.15f);
+                transform.eulerAngles = new Vector3 (0, 0, transform.localEulerAngles.z);
 				_ControlMeta._MoveControl._CharacterRigidbody2D.angularVelocity = 0;
 			
 			}
@@ -35,7 +36,7 @@ public class RotationControl : MonoBehaviour {
 			var mousePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			//Debug.Log (mousePosition);
 			Quaternion rotati = Quaternion.LookRotation (transform.position - mousePosition, Vector3.forward);
-			transform.rotation = rotati;
+			transform.rotation = Quaternion.Slerp(transform.rotation, rotati,0.15f);
 			transform.eulerAngles = new Vector3 (0, 0, transform.localEulerAngles.z);
 			_ControlMeta._MoveControl._CharacterRigidbody2D.angularVelocity = 0;
 

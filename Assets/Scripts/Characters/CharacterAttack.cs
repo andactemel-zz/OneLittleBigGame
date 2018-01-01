@@ -21,8 +21,16 @@ public class CharacterAttack : MonoBehaviour {
         if (_ControlMeta._ControlMethod.joystick)
         {
             //When Joystick X input Came takes it move the character
-           
-        
+            if (Input.GetAxis("Fire1_Pad") > 0f)
+            {
+
+                _CharacterAnimationControl.AttackMeleeStart();
+            }
+            else
+            {
+                _CharacterAnimationControl.AttackMeleeFinish();
+            }
+
 
         }
         else

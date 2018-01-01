@@ -18,7 +18,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: 0, y: 0, z: -30.338001}
+        value: {x: 0, y: 0, z: -15.1086}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -30,7 +30,7 @@ AnimationClip:
         tangentMode: 0
       - serializedVersion: 2
         time: 1
-        value: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: -23.443}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -427,7 +427,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -30.338001
+        value: -15.1086
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -439,7 +439,7 @@ AnimationClip:
         tangentMode: 136
       - serializedVersion: 2
         time: 1
-        value: 0
+        value: -23.443
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1274,7 +1274,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Body
+    path: Body/RightArm/RightHand/MeleeWeapon
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1284,7 +1284,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Body
+    path: Body/RightArm/RightHand/MeleeWeapon
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1294,7 +1294,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Body
+    path: Body/RightArm/RightHand/MeleeWeapon
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1424,7 +1424,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Body/RightArm/RightHand/MeleeWeapon
+    path: Body
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1434,7 +1434,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Body/RightArm/RightHand/MeleeWeapon
+    path: Body
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1444,7 +1444,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Body/RightArm/RightHand/MeleeWeapon
+    path: Body
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
