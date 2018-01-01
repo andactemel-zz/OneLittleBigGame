@@ -10,7 +10,7 @@ public class MoveControl : MonoBehaviour {
 	public Vector2 moveDirection = Vector2.zero;
 	public bool PyhsicControl=false;
 
-
+    public float rotateAngle = 0f;
 	// Use this for initialization
 	void Start () {
 		_CharacterRigidbody2D = _CharacterTransform.GetComponent<Rigidbody2D> ();
@@ -48,6 +48,8 @@ public class MoveControl : MonoBehaviour {
 			_CharacterTransform.Translate(moveDirection*speed*Time.deltaTime,Space.World);
 
 		}
+        // Debug.Log(moveDirection + "Karakter move");
+       
 		//
 
 	}

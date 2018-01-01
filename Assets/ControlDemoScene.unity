@@ -766,9 +766,10 @@ GameObject:
   - component: {fileID: 1080692779}
   - component: {fileID: 1080692782}
   - component: {fileID: 1080692781}
+  - component: {fileID: 1080692783}
   m_Layer: 9
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -848,6 +849,7 @@ MonoBehaviour:
   speed: 6
   moveDirection: {x: 0, y: 0}
   PyhsicControl: 0
+  rotateAngle: 0
 --- !u!50 &1080692778
 Rigidbody2D:
   serializedVersion: 4
@@ -905,6 +907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ControlMeta: {fileID: 1471428324}
+  RotationAngle: 0
 --- !u!114 &1080692781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,6 +936,19 @@ MonoBehaviour:
   bitingVolume: 10
   handSpace: 10
   armStrong: 10
+--- !u!114 &1080692783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080692774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf058b2bd6b26140a5c6826447a959d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ControlMeta: {fileID: 1471428324}
+  _CharacterAnimationControl: {fileID: 2113063306}
 --- !u!1 &1142857840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1214,8 @@ MonoBehaviour:
   _MoveControl: {fileID: 1080692777}
   _RotationControl: {fileID: 1080692780}
   _CameraControl: {fileID: 1471428325}
+  _CharacterAttack: {fileID: 1080692783}
+  rotationControlActive: 1
 --- !u!114 &1471428325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1849,6 +1867,7 @@ GameObject:
   - component: {fileID: 2113063304}
   - component: {fileID: 2113063303}
   - component: {fileID: 2113063305}
+  - component: {fileID: 2113063306}
   m_Layer: 0
   m_Name: CharacterParent
   m_TagString: Untagged
@@ -1931,3 +1950,15 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!114 &2113063306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2113063302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5191621ab7eabc74a8f397f85da4657a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ControlMeta: {fileID: 1471428324}

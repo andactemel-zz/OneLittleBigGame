@@ -7,6 +7,10 @@ public class ControlMeta : MonoBehaviour {
 	public MoveControl _MoveControl;
 	public RotationControl _RotationControl;
 	public CameraControl _CameraControl;
+    public CharacterAttack _CharacterAttack;
+
+
+    public bool rotationControlActive = true;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,13 +24,18 @@ public class ControlMeta : MonoBehaviour {
 
 	}
 	void FixedUpdate(){
-	
+	    
 		//Move the Character According to left stick input or wasd
 		_MoveControl._MoveControlScript ();
-		//Rotate The Character According to Mouse Position or Right Analog
-		_RotationControl.RotationControlScript();
+        //Rotate The Character According to Mouse Position or Right Analog
+        if (rotationControlActive)
+        {
+            _RotationControl.RotationControlScript();
+        }
 		//Camera Follow Character
 		_CameraControl.CameraControlScript();
+        _CharacterAttack.ChracterAtttackScript();
 
-	}
+
+    }
 }

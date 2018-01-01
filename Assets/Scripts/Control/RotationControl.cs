@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotationControl : MonoBehaviour {
 	public ControlMeta _ControlMeta;
+    public float RotationAngle=0f;
 	// Use this for initialization
 	void Start () {
 		//Debug.Log ("dsd");
@@ -39,5 +40,8 @@ public class RotationControl : MonoBehaviour {
 			_ControlMeta._MoveControl._CharacterRigidbody2D.angularVelocity = 0;
 
 		}
-	}
+        // Debug.Log((Vector2)transform.transform.up+"Karakter Rot");
+        RotationAngle = Vector2.SignedAngle(Vector2.up, transform.up);
+        //Debug.Log(Vector2.SignedAngle(Vector2.up, transform.up));
+    }
 }

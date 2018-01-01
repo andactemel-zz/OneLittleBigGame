@@ -13,19 +13,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Horizontal
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: AttackReady
+    m_Controller: {fileID: 9100000}
+  - m_Name: AttackReadyMelee
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -51,6 +51,17 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &114154517422695432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729e930a80a80e845a1beb29b2230c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!206 &206067839036072398
 BlendTree:
   m_ObjectHideFlags: 3
@@ -271,7 +282,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AttackReady
+    m_ConditionEvent: AttackReadyMelee
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102499491900258246}
@@ -295,7 +306,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: AttackReady
+    m_ConditionEvent: AttackReadyMelee
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102009142609874448}
@@ -303,9 +314,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.09382558
+  m_TransitionDuration: 0.2264007
   m_TransitionOffset: 0
-  m_ExitTime: 0.90889335
+  m_ExitTime: 0.9982789
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -324,9 +335,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.23188882
+  m_TransitionDuration: 0.18770087
   m_TransitionOffset: 0
-  m_ExitTime: 0.07693082
+  m_ExitTime: 0.97755194
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -343,7 +354,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101386741607582184}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 114154517422695432}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -470,13 +482,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102499491900258246}
-    m_Position: {x: 168, y: 240, z: 0}
+    m_Position: {x: 192, y: 312, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102323054104075608}
     m_Position: {x: 342.4626, y: 131.39644, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102009142609874448}
-    m_Position: {x: 456, y: 252, z: 0}
+    m_Position: {x: 540, y: 312, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
