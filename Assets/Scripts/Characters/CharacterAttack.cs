@@ -17,7 +17,7 @@ public class CharacterAttack : MonoBehaviour {
 
     public void ChracterAtttackScript()
     {
-        Debug.Log(Input.GetAxis("Fire1"));
+       // Debug.Log(Input.GetAxis("Fire1"));
         if (_ControlMeta._ControlMethod.joystick)
         {
             //When Joystick X input Came takes it move the character

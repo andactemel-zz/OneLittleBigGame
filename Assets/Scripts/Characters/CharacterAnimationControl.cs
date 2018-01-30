@@ -36,7 +36,7 @@ public class CharacterAnimationControl : MonoBehaviour {
     
     public void AttackMeleeStart()
     {
-        Debug.Log("Melee start");
+        //Debug.Log("Melee start");
         animator.SetBool("AttackReadyMelee", true);
     }
     public void AttackMeleeFinish()
