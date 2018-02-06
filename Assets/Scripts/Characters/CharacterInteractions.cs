@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CharacterInteractions : MonoBehaviour {
    
-    public GameObject interActionOpenUI;
-    public Sprite KeyboardSelectUi;
-    public Sprite GamePadSelectUi;
+    InterActionControl interActionOpenUI;
+  
+    
 	// Use this for initialization
 	void Start () {
-        
-        
+       interActionOpenUI = GameObject.FindGameObjectWithTag("InteractionUI").GetComponent<InterActionControl>();
+       
     }
 	
 	// Update is called once per frame
@@ -23,25 +23,15 @@ public class CharacterInteractions : MonoBehaviour {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 1f, itemLayerMask);
         if (hit.collider != null)
         {
-
-            //TO DO 
-            //item menu selector will opened
-            interActionOpenUI.GetComponent<SpriteRenderer>().enabled = true;
-            interActionOpenUI.transform.position = hit.collider.gameObject.transform.position ;
-
-        }else
+            interActionOpenUI.SetState(StateOfUIInterAction.Opened, hit.collider.gameObject.transform.position );
+        }
+        else
         {
-            interActionOpenUI.GetComponent<SpriteRenderer>().enabled = false;
+            interActionOpenUI.SetState(StateOfUIInterAction.Closed, Vector3.zero);
         }
 
         Debug.DrawLine(transform.position,transform.position+transform.up,Color.red,0.1f);
         
     }
-    public void ChangeSelectUI(bool joyStick) {
-        if (joyStick) {
-            interActionOpenUI.GetComponent<SpriteRenderer>().sprite = GamePadSelectUi;
-        }else{
-            interActionOpenUI.GetComponent<SpriteRenderer>().sprite = KeyboardSelectUi;
-        }
-    }
+    
  }
