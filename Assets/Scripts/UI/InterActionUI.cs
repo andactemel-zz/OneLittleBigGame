@@ -37,5 +37,10 @@ public class InterActionUI : MonoBehaviour
         }
         return KeyboardInterActionUI;
     }
+
+    public void CallInterActionOption()
+    {
+        GetComponent<Item>().InterAction();
+    }
 }
  

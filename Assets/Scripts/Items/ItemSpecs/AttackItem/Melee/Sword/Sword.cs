@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Sword : Melee {
-
+    
 	// Use this for initialization
 	void Start () {
 		

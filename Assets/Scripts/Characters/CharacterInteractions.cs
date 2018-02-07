@@ -20,7 +20,7 @@ public class CharacterInteractions : MonoBehaviour {
     void FixedUpdate(){
 
         int itemLayerMask = LayerMask.GetMask("interactionUILayer");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 1f, itemLayerMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 1.5f, itemLayerMask);
         if (hit.collider != null)
         {
             interActionOpenUI.SetState(StateOfUIInterAction.Opened, hit.collider.gameObject.GetComponent<InterActionUI>() );
@@ -30,7 +30,7 @@ public class CharacterInteractions : MonoBehaviour {
             interActionOpenUI.SetState(StateOfUIInterAction.Closed, null);
         }
 
-        Debug.DrawLine(transform.position,transform.position+transform.up,Color.red,0.1f);
+        Debug.DrawLine(transform.position,(transform.position+transform.up*1.5f),Color.red,0.1f);
         
     }
     

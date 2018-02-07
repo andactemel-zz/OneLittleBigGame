@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour {
     public float weight = 0f;
-    public float height = 0f;
-    public float width = 0f;
-    public float depth = 0f;
+    
 
     // Use this for initialization
     void Start () {
@@ -17,4 +15,8 @@ public class Item : MonoBehaviour {
 	void Update () {
 		
 	}
+    public virtual void InterAction()
+    {
+        Debug.Log("item");
+    }
 }
