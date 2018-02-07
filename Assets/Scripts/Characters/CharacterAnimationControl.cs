@@ -16,7 +16,7 @@ public class CharacterAnimationControl : MonoBehaviour {
 	
 	void Update () {
         Vector2 AnimatonVerticalHorizontal= CalculateMovingAnimationValues();
-        //Debug.Log(AnimatonVerticalHorizontal);
+       
         float targetVertical = Mathf.Lerp(verticalLast, AnimatonVerticalHorizontal.y, 0.3f);
         float targetHorizontal = Mathf.Lerp(horizontalLast, AnimatonVerticalHorizontal.x, 0.3f);
 
@@ -34,14 +34,17 @@ public class CharacterAnimationControl : MonoBehaviour {
        
     }
     
-    public void AttackMeleeStart()
+    public void AttackMeleeStart(float AttackSpeed)
     {
-        //Debug.Log("Melee start");
+
+        animator.SetFloat("AttackSpeed", AttackSpeed);
         animator.SetBool("AttackReadyMelee", true);
     }
     public void AttackMeleeFinish()
     {
+       
         animator.SetBool("AttackReadyMelee", false);
+        
     }
 
 }

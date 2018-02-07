@@ -5,11 +5,11 @@ using UnityEngine;
 public class UiControlChanger : MonoBehaviour {
 
 
-     InterActionControl _CharacterInteractions;
+     //InterActionControl _CharacterInteractions;
 
     // Use this for initialization
     void Start () {
-        _CharacterInteractions = GameObject.FindGameObjectWithTag("InteractionUI").GetComponent<InterActionControl>();
+       // _CharacterInteractions = GameObject.FindGameObjectWithTag("InteractionUI").GetComponent<InterActionControl>();
     }
 	
 	// Update is called once per frame
@@ -17,8 +17,8 @@ public class UiControlChanger : MonoBehaviour {
 		
 	}
 
-    public void UpdateUIAccordingToControlChange(bool joystick)
-    {
-        _CharacterInteractions.ChangeSelectUI(joystick);
-    }
+    //public void UpdateUIAccordingToControlChange(bool joystick)
+    //{
+    //    _CharacterInteractions.ChangeSelectUI(joystick);
+    //}
 }

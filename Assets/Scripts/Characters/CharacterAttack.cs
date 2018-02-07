@@ -15,6 +15,10 @@ public class CharacterAttack : MonoBehaviour {
 		
 	}
 
+    public float GetCharacterAttackSpeed()
+    {
+        return 1f;
+    }
     public void ChracterAtttackScript()
     {
        // Debug.Log(Input.GetAxis("Fire1"));
@@ -24,7 +28,7 @@ public class CharacterAttack : MonoBehaviour {
             if (Input.GetAxis("Fire1_Pad") > 0f)
             {
 
-                _CharacterAnimationControl.AttackMeleeStart();
+                _CharacterAnimationControl.AttackMeleeStart(GetCharacterAttackSpeed());
             }
             else
             {
@@ -40,7 +44,7 @@ public class CharacterAttack : MonoBehaviour {
             if (Input.GetAxis("Fire1") > 0f)
             {
 
-                _CharacterAnimationControl.AttackMeleeStart();
+                _CharacterAnimationControl.AttackMeleeStart(GetCharacterAttackSpeed());
             }
             else
             {

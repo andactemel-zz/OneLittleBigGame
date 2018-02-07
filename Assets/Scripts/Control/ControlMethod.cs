@@ -24,7 +24,7 @@ public class ControlMethod : MonoBehaviour {
 				|| Input.GetAxis ("Vertical") != 0f) {
 				joystick = false;
                 //Debug.Log ("klavye gecildi");
-                _UiControlChanger.UpdateUIAccordingToControlChange(joystick);
+                //_UiControlChanger.UpdateUIAccordingToControlChange(joystick);
 
 
             }
@@ -39,7 +39,7 @@ public class ControlMethod : MonoBehaviour {
 				|| Input.GetAxis ("Vertical_Pad") != 0f) {
 				joystick = true;
                 //Debug.Log ("joy pad'e gecildi");
-                _UiControlChanger.UpdateUIAccordingToControlChange(joystick);
+                //_UiControlChanger.UpdateUIAccordingToControlChange(joystick);
 
             }
 

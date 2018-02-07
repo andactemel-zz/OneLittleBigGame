@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class InterActionControl : MonoBehaviour {
 
-    public Sprite KeyboardSelectUi;
-    public Sprite GamePadSelectUi;
-  
+    SpriteRenderer _ItselfSR;
+    Text _InteractionUIText;
     // Use this for initialization
+    void Awake()
+    {
+        _ItselfSR = GetComponent<SpriteRenderer>();
+        _InteractionUIText = GameObject.Find("InteractionUIText").GetComponent<Text>();
+    }
     void Start () {
 		
 	}
@@ -17,33 +21,36 @@ public class InterActionControl : MonoBehaviour {
 		
 	}
 
-    public void SetState(StateOfUIInterAction SUII,Vector3 Position)
+    public void SetState(StateOfUIInterAction SUII,InterActionUI _InterActionUI)
     {
+        if (_InterActionUI == null)
+        {
+           
+            transform.position = Vector3.zero;
+            _ItselfSR.enabled = false;
+            _InteractionUIText.text = "";
+            return;
+        }
+        transform.position = _InterActionUI.gameObject.transform.position;
         if (SUII == StateOfUIInterAction.Opened)
         {
-            GetComponent<SpriteRenderer>().enabled = true;
+            _ItselfSR.sprite = _InterActionUI.GetInterActionUISprite();
+            _InteractionUIText.text = _InterActionUI.info;
+            _ItselfSR.enabled = true;
+
+           
           
         }else if(SUII == StateOfUIInterAction.Closed)
         {
-            GetComponent<SpriteRenderer>().enabled = false;
-            
+            _ItselfSR.enabled = false;
+            _InteractionUIText.text = "";
+
         }
-        transform.position = Position;
+       
     }
     
 
 
-    public void ChangeSelectUI(bool joyStick)
-    {
-        if (joyStick)
-        {
-            GetComponent<SpriteRenderer>().sprite = GamePadSelectUi;
-        }
-        else
-        {
-            GetComponent<SpriteRenderer>().sprite = KeyboardSelectUi;
-        }
-    }
 
 }
 

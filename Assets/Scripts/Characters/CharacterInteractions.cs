@@ -19,15 +19,15 @@ public class CharacterInteractions : MonoBehaviour {
 	}
     void FixedUpdate(){
 
-        int itemLayerMask = LayerMask.GetMask("itemLayer");
+        int itemLayerMask = LayerMask.GetMask("interactionUILayer");
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 1f, itemLayerMask);
         if (hit.collider != null)
         {
-            interActionOpenUI.SetState(StateOfUIInterAction.Opened, hit.collider.gameObject.transform.position );
+            interActionOpenUI.SetState(StateOfUIInterAction.Opened, hit.collider.gameObject.GetComponent<InterActionUI>() );
         }
         else
         {
-            interActionOpenUI.SetState(StateOfUIInterAction.Closed, Vector3.zero);
+            interActionOpenUI.SetState(StateOfUIInterAction.Closed, null);
         }
 
         Debug.DrawLine(transform.position,transform.position+transform.up,Color.red,0.1f);
