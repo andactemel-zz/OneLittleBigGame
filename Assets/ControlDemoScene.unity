@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 150907508}
   - component: {fileID: 150907507}
   - component: {fileID: 150907509}
+  - component: {fileID: 150907510}
   m_Layer: 0
   m_Name: item_2_trigger_Layer
   m_TagString: Untagged
@@ -405,6 +406,22 @@ MonoBehaviour:
     type: 3}
   GamePadInterAction: {fileID: 21300000, guid: af2111c9f8a67414888f2641166d03a5, type: 3}
   info: 
+--- !u!114 &150907510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 150907505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b639473d403a46a4b83dc1a545a47ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0
+  Damage: 1
+  Speed: 1
+  _range: 1
+  _Sprite: {fileID: 21300000, guid: 6481053613b307947804e7e3cf5546b0, type: 3}
 --- !u!1 &228172599
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c5470330ae1c54c86509c22cba3b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ListenEvent: 0
 --- !u!1 &1080692774
 GameObject:
   m_ObjectHideFlags: 0

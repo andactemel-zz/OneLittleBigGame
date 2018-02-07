@@ -17,6 +17,8 @@ public class Melee : AttackItem {
 	}
     public override void InterAction()
     {
-        Debug.Log("Melee");
+        //deneme equip
+
+        //Todo Take
     }
 }
