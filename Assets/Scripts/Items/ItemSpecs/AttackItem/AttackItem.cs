@@ -6,13 +6,9 @@ public class AttackItem : Item {
 
     public float Damage = 1f;
     public float Speed = 1f;
-   
-    
- 
-
 	// Use this for initialization
-	void Start () {
-		
+	public override void Start () {
+        base.Start();
 	}
 	
 	// Update is called once per frame
