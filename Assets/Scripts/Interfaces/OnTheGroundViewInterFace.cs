@@ -5,8 +5,7 @@ using UnityEngine;
 public interface OnTheGroundViewInterFace {
     void SetVisibleOnGround();
     void SetInVisibleOnGround();
-    void MakeWalkable();
-    void UnMakeWalkable();
+    void SetWalkableStatus(bool Walkable);
     void SetOntheGroundSprite(Sprite OntheGround_New);
     Sprite GetOntheGroundSprite();
 }
