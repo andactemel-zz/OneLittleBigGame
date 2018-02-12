@@ -121,9 +121,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 104937483}
+  - component: {fileID: 104937484}
   m_Layer: 0
   m_Name: Inventory
-  m_TagString: Untagged
+  m_TagString: inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,6 +143,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &104937484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104937482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a9ddee115971e4ebc466aba84a2fc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackItem: {fileID: 1274636597}
+  DefenceItem: {fileID: 0}
+  JeweleryItem: {fileID: 0}
+  PotionItem: {fileID: 0}
+  WareItem: {fileID: 0}
 --- !u!1 &121450692
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.43752083, y: 0}
   m_AnchorMax: {x: 0.5674792, y: 0.35559997}
-  m_AnchoredPosition: {x: -1.199997, y: 0.35399628}
+  m_AnchoredPosition: {x: -1.199997, y: 0.3540039}
   m_SizeDelta: {x: 0.19999695, y: 0.28699875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &149264144
@@ -420,7 +437,10 @@ MonoBehaviour:
   weight: 0
   OnTheGroundSpriteRenderer: {fileID: 0}
   _Walkable_Collider: {fileID: 0}
-  _Walkable_Status: 1
+  _Interactable_Collider: {fileID: 0}
+  _Walkable_Status: 0
+  _InventoryControl: {fileID: 0}
+  _interactable: 1
   Damage: 1
   Speed: 1
   _range: 1
@@ -2119,7 +2139,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.12118517}
-  m_AnchoredPosition: {x: 0, y: 0.30218506}
+  m_AnchoredPosition: {x: 0, y: 0.3022461}
   m_SizeDelta: {x: 0, y: 0.69999695}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2010610529

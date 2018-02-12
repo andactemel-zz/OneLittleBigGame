@@ -7,5 +7,6 @@ public interface OnTheGroundViewInterFace {
     void SetInVisibleOnGround();
     void SetWalkableStatus(bool Walkable);
     void SetOntheGroundSprite(Sprite OntheGround_New);
+    void SetInteractable(bool interactable);
     Sprite GetOntheGroundSprite();
 }

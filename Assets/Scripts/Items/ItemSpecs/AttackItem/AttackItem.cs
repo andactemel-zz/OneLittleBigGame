@@ -15,4 +15,10 @@ public class AttackItem : Item {
 	void Update () {
 		
 	}
+    public override void InterAction()
+    {
+
+        //Todo Take
+        _InventoryControl.GetItemToBag(this);
+    }
 }

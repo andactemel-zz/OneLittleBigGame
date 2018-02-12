@@ -29,14 +29,14 @@ public class InterActionControl : MonoBehaviour {
         {
             if (_ControlMeta._ControlMethod.joystick)
             {
-                if (Input.GetButton("Fire2_Pad"))
+                if (Input.GetButtonUp("Fire2_Pad"))
                 {
                     _Active.CallInterActionOption();
                 }
             }
             else
             {
-                if (Input.GetButton("Fire2"))
+                if (Input.GetButtonUp("Fire2"))
                 {
                     _Active.CallInterActionOption();
                 }

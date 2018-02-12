@@ -15,10 +15,5 @@ public class Melee : AttackItem {
 	void Update () {
 		
 	}
-    public override void InterAction()
-    {
-        //deneme equip
-
-        //Todo Take
-    }
+    
 }
