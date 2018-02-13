@@ -29,6 +29,7 @@ public class Item : MonoBehaviour,OnTheGroundViewInterFace {
     public virtual void InterAction()
     {
         Debug.Log("Item InterAction Working Now");
+        _InventoryControl.GetItemToBag(this);
     }
 
     public virtual void SetVisibleOnGround()

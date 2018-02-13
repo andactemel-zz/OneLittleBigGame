@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrossBow : Ranged {
+public class WareItem : Item {
 
     // Use this for initialization
     public override void Start()

@@ -31,8 +31,22 @@ public class InventoryControl : MonoBehaviour {
        
         if(item is AttackItem)
         {
-           
             return AttackItem;
+        }else if(item is DefenceItem) 
+        {
+            return DefenceItem;
+        }
+        else if (item is JeweleryItem)
+        {
+            return JeweleryItem;
+        }
+        else if (item is PotionItem)
+        {
+            return PotionItem;
+        }
+        else if (item is WareItem)
+        {
+            return WareItem;
         }
         return WareItem;
     }
