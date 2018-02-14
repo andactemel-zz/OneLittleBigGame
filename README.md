@@ -73,5 +73,5 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 - [SquarePug](https://opengameart.org/users/square-pug-games), For Top down Character Pack: [Pack Link](https://opengameart.org/content/top-down-shooter-character)
 - [Buch](https://opengameart.org/users/buch),For First Sword Art [Sword](https://opengameart.org/content/sword-1)
 - [Bluce](https://opengameart.org/users/bluce),For First Axe Art [Axe](https://opengameart.org/content/flame-ice-axe)
-
+- [Emerald](https://opengameart.org/users/emerald),For First CrossBow Art [CrossBow](https://opengameart.org/content/loyalty-lies-equipment-bows)
 
