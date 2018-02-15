@@ -6,9 +6,11 @@ public class AttackItem : Item {
 
     public float Damage = 1f;
     public float Speed = 1f;
-    public string a = "";
-	// Use this for initialization
-	public override void Start () {
+   
+    public AttackWeaponType _WeaponType;
+    public Sprite _WeaponOnTheCharacterSprite;
+    // Use this for initialization
+    public override void Start () {
         base.Start();
       
 	}

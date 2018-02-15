@@ -34,17 +34,76 @@ public class CharacterAnimationControl : MonoBehaviour {
        
     }
     
-    public void AttackMeleeStart(float AttackSpeed)
+    public void AnimationAttackStart(float AttackSpeed,AttackItem equipped)
+    {
+        if (equipped == null)
+        {
+            //Bare Hands Attack
+            return;
+        }
+
+        if (equipped._WeaponType == AttackWeaponType.Melee)
+        {
+            //Melee Satart
+            AttackMeleeStart(AttackSpeed);
+        }else if(equipped._WeaponType == AttackWeaponType.CrossBow)
+        {
+            //Cross Bow Start
+            CrossBowReadyStart(AttackSpeed);
+        }
+      
+    }
+    public void AnimationAttackFinish(float AttackSpeed,AttackItem equipped)
+    {
+        if (equipped == null)
+        {
+            //Bare Hands Attack Finish
+            return;
+        }
+        if (equipped._WeaponType == AttackWeaponType.Melee)
+        {
+            //Melee Satart
+            AttackMeleeFinish(AttackSpeed);
+        }
+        else if (equipped._WeaponType == AttackWeaponType.CrossBow)
+        {
+            //Cross Bow Start
+            CrossBowRelease(AttackSpeed);
+        }
+       
+    }
+
+
+
+
+
+
+
+    void CrossBowReadyStart(float AttackSpeed)
+    {
+        animator.SetFloat("AttackSpeed", AttackSpeed);
+        animator.SetBool("CrossBowAttackReady", true);
+    }
+    void CrossBowRelease(float AttackSpeed)
+    {
+        animator.SetBool("CrossBowAttackReady", false);
+    }
+    void AttackMeleeStart(float AttackSpeed)
     {
 
         animator.SetFloat("AttackSpeed", AttackSpeed);
         animator.SetBool("AttackReadyMelee", true);
     }
-    public void AttackMeleeFinish()
+    void AttackMeleeFinish(float AttackSpeed)
     {
        
         animator.SetBool("AttackReadyMelee", false);
         
     }
 
+}
+
+public enum AttackWeaponType
+{
+    Melee = 0, CrossBow = 1,
 }

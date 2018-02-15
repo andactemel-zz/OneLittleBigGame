@@ -5,15 +5,18 @@ using UnityEngine;
 public class CharacterAttack : MonoBehaviour {
     public ControlMeta _ControlMeta;
     public CharacterAnimationControl _CharacterAnimationControl;
+
+    InventoryControl IC;
     // Use this for initialization
     void Start () {
-		
+        IC = GameObject.FindGameObjectWithTag("inventory").GetComponent<InventoryControl>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
 
     public float GetCharacterAttackSpeed()
     {
@@ -28,11 +31,13 @@ public class CharacterAttack : MonoBehaviour {
             if (Input.GetAxis("Fire1_Pad") > 0f)
             {
 
-                _CharacterAnimationControl.AttackMeleeStart(GetCharacterAttackSpeed());
+                // _CharacterAnimationControl.AttackMeleeStart(GetCharacterAttackSpeed());
+                _CharacterAnimationControl.AnimationAttackStart(GetCharacterAttackSpeed(), IC.GetEquippedAttackItem());
             }
             else
             {
-                _CharacterAnimationControl.AttackMeleeFinish();
+                // _CharacterAnimationControl.AttackMeleeFinish();
+                _CharacterAnimationControl.AnimationAttackFinish(GetCharacterAttackSpeed(), IC.GetEquippedAttackItem());
             }
 
 
@@ -44,11 +49,13 @@ public class CharacterAttack : MonoBehaviour {
             if (Input.GetAxis("Fire1") > 0f)
             {
 
-                _CharacterAnimationControl.AttackMeleeStart(GetCharacterAttackSpeed());
+                //_CharacterAnimationControl.AttackMeleeStart(GetCharacterAttackSpeed());
+                _CharacterAnimationControl.AnimationAttackStart(GetCharacterAttackSpeed(), IC.GetEquippedAttackItem());
             }
             else
             {
-                _CharacterAnimationControl.AttackMeleeFinish();
+                //_CharacterAnimationControl.AttackMeleeFinish();
+                _CharacterAnimationControl.AnimationAttackFinish(GetCharacterAttackSpeed(), IC.GetEquippedAttackItem());
             }
         }
 

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour {
-
-	void Start () {
+    public GameObject MeleeItemCharacterSlot;
+    public GameObject CrossBowItemCharacterSlot;
+    void Start () {
 		
 	}
 	
