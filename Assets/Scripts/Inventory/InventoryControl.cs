@@ -38,7 +38,7 @@ public class InventoryControl : MonoBehaviour {
         item.transform.parent.SetParent( DetermineInventorySlot(item));
         item.transform.parent.localPosition = Vector3.zero;
 
-        EquipAttackItem((AttackItem)item);
+        //EquipAttackItem((AttackItem)item);
     }
 
     public void EquipAttackItem(AttackItem item)
