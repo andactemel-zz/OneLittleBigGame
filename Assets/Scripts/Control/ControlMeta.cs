@@ -8,6 +8,7 @@ public class ControlMeta : MonoBehaviour {
 	public RotationControl _RotationControl;
 	public CameraControl _CameraControl;
     public CharacterAttack _CharacterAttack;
+    public UIController _UIController;
 
 
     public bool rotationControlActive = true;
@@ -24,7 +25,7 @@ public class ControlMeta : MonoBehaviour {
 
 	}
 	void FixedUpdate(){
-	    
+        if (_UIController._OpenedUI) { return; }//If  UI Opened Cancel Movement
 		//Move the Character According to left stick input or wasd
 		_MoveControl._MoveControlScript ();
         //Rotate The Character According to Mouse Position or Right Analog

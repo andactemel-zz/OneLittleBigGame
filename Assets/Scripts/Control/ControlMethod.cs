@@ -5,7 +5,6 @@ using UnityEngine;
 public class ControlMethod : MonoBehaviour {
 
 	public bool joystick=false;
-    public UiControlChanger _UiControlChanger;
 
     // Use this for initialization
     void Start () {
@@ -14,17 +13,18 @@ public class ControlMethod : MonoBehaviour {
 
 	public void ControlMethodScript(){
 		if (joystick) {
-			
 			if (Input.GetAxis ("Mouse X") != 0f
 				|| Input.GetAxis ("Mouse Y") != 0f
 				|| Input.GetAxis("Fire1")!=0f
 				|| Input.GetButton("Fire2")
 				|| Input.GetButton("Fire3")
 				|| Input.GetAxis ("Horizontal") != 0f
-				|| Input.GetAxis ("Vertical") != 0f) {
+				|| Input.GetAxis ("Vertical") != 0f
+                || Input.GetButton("Menu")
+                || Input.GetButton("Cancel")) {
 				joystick = false;
-                //Debug.Log ("klavye gecildi");
-                //_UiControlChanger.UpdateUIAccordingToControlChange(joystick);
+                Debug.Log ("klavye gecildi");
+                
 
 
             }
@@ -36,10 +36,12 @@ public class ControlMethod : MonoBehaviour {
 				|| Input.GetButton("Fire2_Pad")
 				|| Input.GetButton("Fire3_Pad")
 				|| Input.GetAxis ("Horizontal_Pad") != 0f
-				|| Input.GetAxis ("Vertical_Pad") != 0f) {
+				|| Input.GetAxis ("Vertical_Pad") != 0f
+                || Input.GetButton("Menu_Pad")
+                || Input.GetButton("Cancel_Pad")) {
 				joystick = true;
-                //Debug.Log ("joy pad'e gecildi");
-                //_UiControlChanger.UpdateUIAccordingToControlChange(joystick);
+                Debug.Log ("joy pad'e gecildi");
+                
 
             }
 
