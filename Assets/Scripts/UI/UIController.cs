@@ -11,10 +11,10 @@ public class UIController : MonoBehaviour {
     public GameObject _GameUI;
     public GameObject _SystemUI;
 
-
+    public UISelect _UISelect;
     public ItemCreateInScrollView AttackItem_Content;
 	void Start () {
-		
+        _UISelect = GameObject.FindGameObjectWithTag("UISelect").GetComponent<UISelect>();
 	}
 	
 	// Update is called once per frame
@@ -35,6 +35,7 @@ public class UIController : MonoBehaviour {
         _OpenedGameUI = !_OpenedGameUI;
         _GameUI.SetActive(_OpenedGameUI);
         _OpenedUI = _OpenedGameUI || _OpenedSystemUI;
+        _UISelect.SetStatus(_OpenedUI);
 
     }
     public void ToggleSystemUI()
@@ -43,6 +44,7 @@ public class UIController : MonoBehaviour {
         _OpenedSystemUI = !_OpenedSystemUI;
         _SystemUI.SetActive(_OpenedSystemUI);
         _OpenedUI = _OpenedGameUI || _OpenedSystemUI;
+        _UISelect.SetStatus(_OpenedUI);
     }
 
   

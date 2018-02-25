@@ -36,7 +36,7 @@ public class ItemCreateInScrollView : MonoBehaviour {
         float width_Item = ContentRect.rect.width / (float)ColumnCount;
         float height_Item = width_Item;
         float row_Count = ((itemCount / ColumnCount) + 1);
-        float Content_Height = (row_Count-1) * height_Item;
+        float Content_Height = (row_Count) * height_Item;
         ContentRect.sizeDelta = new Vector2(ContentRect.rect.width, Content_Height);
         for(int i = 0; i < itemCount; i++)
         {
