@@ -10,6 +10,9 @@ public class UIController : MonoBehaviour {
 
     public GameObject _GameUI;
     public GameObject _SystemUI;
+
+
+    public ItemCreateInScrollView AttackItem_Content;
 	void Start () {
 		
 	}
@@ -25,7 +28,7 @@ public class UIController : MonoBehaviour {
             ToggleGameUI();
         }
     }
-
+   
     public void ToggleGameUI()
     {
         if (_OpenedSystemUI) { ToggleSystemUI(); }
@@ -42,6 +45,7 @@ public class UIController : MonoBehaviour {
         _OpenedUI = _OpenedGameUI || _OpenedSystemUI;
     }
 
+  
 
 
 }

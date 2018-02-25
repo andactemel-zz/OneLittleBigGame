@@ -12,6 +12,8 @@ public class Item : MonoBehaviour,OnTheGroundViewInterFace {
     public InventoryControl _InventoryControl;
     public bool _interactable = true;
 
+    public bool _equipped = false;
+    public Sprite _Inventory_Icon;
     // Use this for initialization
      public virtual void Start () {
         _Walkable_Collider = transform.parent.GetComponent<BoxCollider2D>();

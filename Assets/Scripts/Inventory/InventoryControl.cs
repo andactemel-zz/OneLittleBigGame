@@ -9,14 +9,18 @@ public class InventoryControl : MonoBehaviour {
     public Transform PotionItem;
     public Transform WareItem;
 
+    public UIController _UIController;
 
     Character _Character;
 
     AttackItem _EquippedAttackItem;
     
+
+
     // Use this for initialization
     void Start () {
         _Character = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
+        _UIController = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
 	}
 	
 	// Update is called once per frame
@@ -40,7 +44,7 @@ public class InventoryControl : MonoBehaviour {
 
         //EquipAttackItem((AttackItem)item);
     }
-
+    
     public void EquipAttackItem(AttackItem item)
     {
         UnEquipWeapons();
@@ -69,19 +73,42 @@ public class InventoryControl : MonoBehaviour {
         _SlotOnCharacterSprite.SetActive(true);
         _SlotOnCharacterSprite.GetComponent<SpriteRenderer>().sprite = _attackItem._WeaponOnTheCharacterSprite;
         _EquippedAttackItem = _attackItem;
+        _EquippedAttackItem._equipped = true;
     }
 
      public  void UnEquipWeapons()
     {
+        if (_EquippedAttackItem != null) { _EquippedAttackItem._equipped = false; }
         _EquippedAttackItem = null;
         _Character.MeleeItemCharacterSlot.SetActive(false);
         _Character.CrossBowItemCharacterSlot.SetActive(false);
     }
+    public List<Item> GetItemsInTheBag(Transform Parent)
+    {
+        List<Item> Items = new List<Item>();
+        foreach(Transform child in Parent)
+        {
+            if (!child.GetChild(0).GetComponent<Item>()._equipped)
+            {
+                Items.Add(child.GetChild(0).GetComponent<Item>());
+            }
+        }
+        return Items;
+    }
+    IEnumerator CallUpdateBag(Transform Parent)
+    {
+        //Waiting for update gme itself
+        yield return null;
+        //Takes all the items in the desired inventory slots and pass them to ui controller attack ıtem window create when any changes in the inventory
+        _UIController.AttackItem_Content.CreateItemSlots(GetItemsInTheBag(Parent));
+    }
     Transform DetermineInventorySlot(Item item)
     {
+        //Determine inventoryslots and update bag accordingly;
        
         if(item is AttackItem)
         {
+            StartCoroutine(CallUpdateBag(AttackItem));
             return AttackItem;
         }else if(item is DefenceItem) 
         {
