@@ -12,7 +12,6 @@ public class ControlMeta : MonoBehaviour {
 
 
     public bool rotationControlActive = true;
-	// Use this for initialization
 	void Start () {
 		
 	}

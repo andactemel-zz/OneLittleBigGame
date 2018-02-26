@@ -23,10 +23,6 @@ public class ControlMethod : MonoBehaviour {
                 || Input.GetButton("Menu")
                 || Input.GetButton("Cancel")) {
 				joystick = false;
-                Debug.Log ("klavye gecildi");
-                
-
-
             }
 		} else {
 			
@@ -40,9 +36,6 @@ public class ControlMethod : MonoBehaviour {
                 || Input.GetButton("Menu_Pad")
                 || Input.GetButton("Cancel_Pad")) {
 				joystick = true;
-                Debug.Log ("joy pad'e gecildi");
-                
-
             }
 
 

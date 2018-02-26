@@ -30,9 +30,24 @@ public class UISelect : MonoBehaviour {
     }
 	
 	// Update is called once per frame
+    public void MakeTopOfEveryThing()
+    {
+        transform.SetParent(_UIController.transform);
+    }
+
+    public void MoveSelection(Vector2 Size,Vector2 Anchor)
+    {
+        if (_ActiveItem != null) { transform.SetParent(_ActiveItem.transform); }
+        selfTransform.sizeDelta = Size;
+        selfTransform.anchoredPosition = Anchor;
+       
+
+    }
 	void Update () {
         if (!go)
         {
+            MoveSelection(targetSize, targetAnchor);
+            MakeTopOfEveryThing();
             return;
         }
        if(Mathf.Abs(targetSize.x-selfTransform.sizeDelta.x)> sizeTreshold ||
@@ -43,19 +58,13 @@ public class UISelect : MonoBehaviour {
         {
             Vector2 next_step_size = Vector2.Lerp(selfTransform.sizeDelta, targetSize, sizeAnimationSpeed);
             Vector2 next_step_anchor = Vector2.Lerp(selfTransform.anchoredPosition, targetAnchor, moveAnimationSpeed);
-            
-            selfTransform.sizeDelta = next_step_size;
-            selfTransform.anchoredPosition = next_step_anchor;
-            transform.SetParent(_ActiveItem.transform);
-
-
-
-        }else
+            MoveSelection(next_step_size, next_step_anchor);
+        }
+        else
         {
-            transform.SetParent(_UIController.transform);
+            MoveSelection(targetSize, targetAnchor);
+            MakeTopOfEveryThing();
             go = false;
-            Debug.Log("Stop");
-            
         }
     }
     public void SetStatus(bool status)
@@ -71,8 +80,5 @@ public class UISelect : MonoBehaviour {
         targetAnchor = Vector2.zero;
         go = true;
         transform.SetParent(_ActiveItem.transform);
-        //selfTransform.sizeDelta = new Vector2(targetTransform.rect.width, targetTransform.rect.height);
-        //selfTransform.anchoredPosition = Vector2.zero;
-        //transform.SetParent(_UIController.transform);
     }
 }

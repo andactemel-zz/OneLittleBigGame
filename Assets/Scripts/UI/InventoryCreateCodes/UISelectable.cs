@@ -10,17 +10,11 @@ public class UISelectable : MonoBehaviour, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("On ME");
         _UISelect.ComeToMe(GetComponent<RectTransform>());
     }
 
-    // Use this for initialization
+
     void Start () {
         _UISelect = GameObject.FindGameObjectWithTag("UISelect").GetComponent<UISelect>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }

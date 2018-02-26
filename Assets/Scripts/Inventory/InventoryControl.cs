@@ -10,6 +10,7 @@ public class InventoryControl : MonoBehaviour {
     public Transform WareItem;
 
     public UIController _UIController;
+    public UISelect _UISelect;
 
     Character _Character;
 
@@ -21,7 +22,8 @@ public class InventoryControl : MonoBehaviour {
     void Start () {
         _Character = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
         _UIController = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
-	}
+        _UISelect = GameObject.FindGameObjectWithTag("UISelect").GetComponent<UISelect>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -98,6 +100,8 @@ public class InventoryControl : MonoBehaviour {
     IEnumerator CallUpdateBag(Transform Parent)
     {
         //Waiting for update gme itself
+        yield return null;
+        _UISelect.MakeTopOfEveryThing();
         yield return null;
         //Takes all the items in the desired inventory slots and pass them to ui controller attack ıtem window create when any changes in the inventory
         _UIController.AttackItem_Content.CreateItemSlots(GetItemsInTheBag(Parent));

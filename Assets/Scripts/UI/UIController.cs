@@ -6,18 +6,13 @@ public class UIController : MonoBehaviour {
     public bool _OpenedUI = false;
     public bool _OpenedGameUI = false;
     public bool _OpenedSystemUI = false;
-    // Use this for initialization
-
     public GameObject _GameUI;
     public GameObject _SystemUI;
-
     public UISelect _UISelect;
     public ItemCreateInScrollView AttackItem_Content;
 	void Start () {
         _UISelect = GameObject.FindGameObjectWithTag("UISelect").GetComponent<UISelect>();
 	}
-	
-	// Update is called once per frame
 	void Update () {
 		if(Input.GetButtonUp("Cancel") || Input.GetButtonUp("Cancel_Pad"))
         {

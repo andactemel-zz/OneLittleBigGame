@@ -14,8 +14,7 @@ public class Item : MonoBehaviour,OnTheGroundViewInterFace {
 
     public bool _equipped = false;
     public Sprite _Inventory_Icon;
-    // Use this for initialization
-     public virtual void Start () {
+    public virtual void Start () {
         _Walkable_Collider = transform.parent.GetComponent<BoxCollider2D>();
         _Interactable_Collider = transform.GetComponent<BoxCollider2D>();
         OnTheGroundSpriteRenderer = GetComponent<SpriteRenderer>();
@@ -24,13 +23,12 @@ public class Item : MonoBehaviour,OnTheGroundViewInterFace {
         SetInteractable(_interactable);
     }
 	
-	// Update is called once per frame
+
 	void Update () {
 		
 	}
     public virtual void InterAction()
     {
-        Debug.Log("Item InterAction Working Now");
         _InventoryControl.GetItemToBag(this);
     }
 

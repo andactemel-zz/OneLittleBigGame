@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ItemCreateInScrollView : MonoBehaviour {
     public GameObject SlotItem;
+    public UISelect _UISelect;
 	// Use this for initialization
 	void Start () {
        // CreateItemSlots(null);
@@ -21,13 +22,15 @@ public class ItemCreateInScrollView : MonoBehaviour {
     {
         for(int i = 0; i < transform.childCount; i++)
         {
+
             Destroy( transform.GetChild(i).gameObject);
+
         }
     }
     public void CreateItemSlots(List<Item> Items)
     {
+       
         ClearSlots();
-        Debug.Log("attack ıtemları guncellendi ui da");
         RectTransform ContentRect = GetComponent<RectTransform>();
 
         int itemCount = Items.Count;
