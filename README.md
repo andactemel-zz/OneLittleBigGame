@@ -69,9 +69,11 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 - [Gazihan Alankuş](https://github.com/gazialankus), for introduced me to Unity,
 - Mr. Mike Geig, for [this](https://unity3d.com/learn/tutorials/topics/2d-game-creation/top-down-2d-game-basics)  little video which gave me courage to start the project,
 
-## 9.Used Assest:
+## 9.Used Temporary Assest:
+- [game-icons.net](http://game-icons.net)
 - [SquarePug](https://opengameart.org/users/square-pug-games), For Top down Character Pack: [Pack Link](https://opengameart.org/content/top-down-shooter-character)
 - [Buch](https://opengameart.org/users/buch),For First Sword Art [Sword](https://opengameart.org/content/sword-1)
 - [Bluce](https://opengameart.org/users/bluce),For First Axe Art [Axe](https://opengameart.org/content/flame-ice-axe)
 - [Emerald](https://opengameart.org/users/emerald),For First CrossBow Art [CrossBow](https://opengameart.org/content/loyalty-lies-equipment-bows)
-
+- [dismal_denizen](https://opengameart.org/users/dismaldenizen),For First Helmet Art [Helmet](https://opengameart.org/content/helmet-barbute)
+- [xevin](https://opengameart.org/users/xevin),For Second Helmet Art [Helmet](https://opengameart.org/content/helmet-0)

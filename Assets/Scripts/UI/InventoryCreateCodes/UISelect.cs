@@ -25,8 +25,8 @@ public class UISelect : MonoBehaviour {
         selfTransform = GetComponent<RectTransform>();
         sizeTreshold = 0.2f;
         anchorTreshold = 0.2f;
-        sizeAnimationSpeed = 0.3f;
-        moveAnimationSpeed = 0.3f;
+        sizeAnimationSpeed = 0.1f;
+        moveAnimationSpeed = 0.1f;
     }
 	
 	// Update is called once per frame

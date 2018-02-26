@@ -10,7 +10,8 @@ public class UIController : MonoBehaviour {
     public GameObject _SystemUI;
     public UISelect _UISelect;
     public ItemCreateInScrollView AttackItem_Content;
-	void Start () {
+    public ItemCreateInScrollView DefenceItem_Content;
+    void Start () {
         _UISelect = GameObject.FindGameObjectWithTag("UISelect").GetComponent<UISelect>();
 	}
 	void Update () {

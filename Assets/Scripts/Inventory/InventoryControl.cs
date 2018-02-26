@@ -104,7 +104,9 @@ public class InventoryControl : MonoBehaviour {
         _UISelect.MakeTopOfEveryThing();
         yield return null;
         //Takes all the items in the desired inventory slots and pass them to ui controller attack ıtem window create when any changes in the inventory
-        _UIController.AttackItem_Content.CreateItemSlots(GetItemsInTheBag(Parent));
+        if (Parent == AttackItem) { _UIController.AttackItem_Content.CreateItemSlots(GetItemsInTheBag(Parent)); }
+        if (Parent == DefenceItem) { _UIController.DefenceItem_Content.CreateItemSlots(GetItemsInTheBag(Parent)); }
+
     }
     Transform DetermineInventorySlot(Item item)
     {
@@ -116,6 +118,7 @@ public class InventoryControl : MonoBehaviour {
             return AttackItem;
         }else if(item is DefenceItem) 
         {
+            StartCoroutine(CallUpdateBag(DefenceItem));
             return DefenceItem;
         }
         else if (item is JeweleryItem)
