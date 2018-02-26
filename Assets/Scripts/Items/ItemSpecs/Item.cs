@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour,OnTheGroundViewInterFace {
+public class Item : MonoBehaviour,OnTheGroundViewInterFace,GameUIActionInterFace {
     public float weight = 0f;
     public SpriteRenderer OnTheGroundSpriteRenderer;
     public BoxCollider2D _Walkable_Collider;
@@ -61,5 +61,15 @@ public class Item : MonoBehaviour,OnTheGroundViewInterFace {
     public void SetInteractable(bool interactable)
     {
         _Interactable_Collider.enabled = interactable;
+    }
+    //GameUIActionInterFace
+    public void UIPrimaryAction()
+    {
+        Debug.Log("Item UI Primary Action");
+    }
+
+    public void UISecondaryAction()
+    {
+        Debug.Log("Item UI Secondry Action");
     }
 }

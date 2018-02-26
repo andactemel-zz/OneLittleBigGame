@@ -1286,6 +1286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _UISelect: {fileID: 0}
+  _Item: {fileID: 0}
 --- !u!1 &611077965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,6 +2660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _UISelect: {fileID: 0}
+  _Item: {fileID: 0}
 --- !u!1 &1135806234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,6 +2801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _UISelect: {fileID: 0}
+  _Item: {fileID: 0}
 --- !u!1 &1140731218
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,6 +3254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _UISelect: {fileID: 0}
+  _Item: {fileID: 0}
 --- !u!1 &1434282891
 GameObject:
   m_ObjectHideFlags: 0

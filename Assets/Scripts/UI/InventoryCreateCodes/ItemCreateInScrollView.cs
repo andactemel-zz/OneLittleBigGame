@@ -48,7 +48,7 @@ public class ItemCreateInScrollView : MonoBehaviour {
             RectTransform item_Rect_Transform = item.GetComponent<RectTransform>();
             item_Rect_Transform.sizeDelta = new Vector2(width_Item, height_Item);
             item_Rect_Transform.anchoredPosition = new Vector2((i%ColumnCount)*width_Item,((i/ColumnCount)*height_Item)*-1);
-            item.GetComponent<ItemHolder>()._Item = Items[i];
+            item.GetComponent<UISelectable>()._Item = Items[i];
             if (Items[i]._Inventory_Icon != null) { item.transform.GetChild(0).GetComponent<Image>().sprite = Items[i]._Inventory_Icon; }
 
         }
