@@ -1798,7 +1798,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ActiveItem: {fileID: 0}
   _UIController: {fileID: 0}
+  _ControlMethod: {fileID: 0}
   go: 0
+  canGo: 1
 --- !u!225 &732627255
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1870,7 +1872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &798855407
 RectTransform:
   m_ObjectHideFlags: 0

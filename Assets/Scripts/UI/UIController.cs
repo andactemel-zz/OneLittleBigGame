@@ -32,7 +32,6 @@ public class UIController : MonoBehaviour {
         _GameUI.SetActive(_OpenedGameUI);
         _OpenedUI = _OpenedGameUI || _OpenedSystemUI;
         _UISelect.SetStatus(_OpenedUI);
-
     }
     public void ToggleSystemUI()
     {

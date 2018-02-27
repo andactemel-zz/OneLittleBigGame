@@ -21,6 +21,7 @@ public class UISelectable : MonoBehaviour, IPointerEnterHandler, IPointerClickHa
 
     void Start () {
         _UISelect = GameObject.FindGameObjectWithTag("UISelect").GetComponent<UISelect>();
+        
 	}
     //GameUIActionInterFace
     public void UIPrimaryAction()
