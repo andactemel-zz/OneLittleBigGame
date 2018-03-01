@@ -1398,7 +1398,7 @@ GameObject:
   - component: {fileID: 228172600}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: EventSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1414,8 +1414,8 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
+  m_HorizontalAxis: Horizontal_Pad
+  m_VerticalAxis: Vertical_Pad
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
@@ -1794,7 +1794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 384, y: 0}
+  m_AnchoredPosition: {x: 384, y: -0.007019043}
   m_SizeDelta: {x: 768, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &330398986
@@ -1843,6 +1843,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SlotItem: {fileID: 1458811276682630, guid: b61b4836830449b4887bf9451aad75c5, type: 2}
   _UISelect: {fileID: 0}
+  columnCount: 4
+  _Left: {fileID: 574924264}
+  _Right: {fileID: 1135806236}
 --- !u!1 &368941348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,10 +2274,10 @@ RectTransform:
   m_Father: {fileID: 798501577}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.067, y: 0.8831366}
-  m_AnchorMax: {x: 0.2825775, y: 0.95345384}
-  m_AnchoredPosition: {x: 2.600006, y: 2.3184814}
-  m_SizeDelta: {x: -2.7999992, y: -1.8829999}
+  m_AnchorMin: {x: 0.067, y: 0.9264538}
+  m_AnchorMax: {x: 0.2758845, y: 1}
+  m_AnchoredPosition: {x: 3, y: 2.3947144}
+  m_SizeDelta: {x: 3.2000008, y: -4.8829994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574924264
 MonoBehaviour:
@@ -3085,7 +3088,7 @@ MonoBehaviour:
   m_Inertia: 1
   m_DecelerationRate: 0.135
   m_ScrollSensitivity: 1
-  m_Viewport: {fileID: 0}
+  m_Viewport: {fileID: 867192161}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
   m_HorizontalScrollbarVisibility: 0
@@ -3226,6 +3229,7 @@ MonoBehaviour:
   _ActiveItem: {fileID: 0}
   _UIController: {fileID: 0}
   _ControlMethod: {fileID: 0}
+  _EventSystem: {fileID: 0}
   go: 0
   canGo: 1
 --- !u!225 &732627255
@@ -5237,7 +5241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.42, y: -0.00012207}
+  m_AnchoredPosition: {x: -4.42, y: -0.00012207031}
   m_SizeDelta: {x: 181.63, y: 59.985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1093359892
@@ -5669,10 +5673,10 @@ RectTransform:
   m_Father: {fileID: 1538557102}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.27242252, y: 0.8877269}
-  m_AnchorMax: {x: 0.48653802, y: 0.95559037}
-  m_AnchoredPosition: {x: 0.89998627, y: -0.78479004}
-  m_SizeDelta: {x: -1.8, y: 0.186}
+  m_AnchorMin: {x: 0.27346203, y: 0.93100005}
+  m_AnchorMax: {x: 0.48653802, y: 1}
+  m_AnchoredPosition: {x: 0.39998627, y: 0.48034668}
+  m_SizeDelta: {x: -0.8000002, y: -0.8139992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1135806236
 MonoBehaviour:
@@ -6122,6 +6126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SlotItem: {fileID: 1458811276682630, guid: b61b4836830449b4887bf9451aad75c5, type: 2}
   _UISelect: {fileID: 0}
+  columnCount: 4
+  _Left: {fileID: 0}
+  _Right: {fileID: 0}
 --- !u!114 &1194566617
 MonoBehaviour:
   m_ObjectHideFlags: 0

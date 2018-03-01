@@ -9,6 +9,7 @@ TagManager:
   - UIController
   - UISelect
   - UISelectable
+  - EventSystem
   layers:
   - Default
   - TransparentFX

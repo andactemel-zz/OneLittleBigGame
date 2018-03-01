@@ -10,9 +10,13 @@ public class UISelectable : MonoBehaviour, IPointerEnterHandler, IPointerClickHa
     public UISelect _UISelect;
     public Item _Item;
 
+    
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         _UISelect.ComeToMe(GetComponent<RectTransform>());
+        _UISelect._EventSystem.SetSelectedGameObject(gameObject);
+
     }
     public void OnPointerClick(PointerEventData eventData)
     {
