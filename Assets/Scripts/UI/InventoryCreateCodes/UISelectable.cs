@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UISelectable : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler,GameUIActionInterFace
+public class UISelectable : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler,GameUIActionInterFace, ISelectHandler
 {
     public UISelect _UISelect;
     public Item _Item;
@@ -50,5 +50,8 @@ public class UISelectable : MonoBehaviour, IPointerEnterHandler, IPointerClickHa
         }
     }
 
-    
+    public void OnSelect(BaseEventData eventData)
+    {
+        _UISelect.ComeToMe(GetComponent<RectTransform>());
+    }
 }

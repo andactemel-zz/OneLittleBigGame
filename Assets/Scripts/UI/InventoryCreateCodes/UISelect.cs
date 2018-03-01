@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UISelect : MonoBehaviour {
+public class UISelect : MonoBehaviour
+{
 
     public RectTransform _ActiveItem;
     public UIController _UIController;
@@ -29,9 +30,13 @@ public class UISelect : MonoBehaviour {
         anchorTreshold = 0.2f;
         sizeAnimationSpeed = 0.1f;
         moveAnimationSpeed = 0.1f;
+
+
+
+       
     }
-	
-	// Update is called once per frame
+  
+    // Update is called once per frame
     public void MakeTopOfEveryThing()
     {
         transform.SetParent(_UIController.transform);
@@ -120,6 +125,7 @@ public class UISelect : MonoBehaviour {
         gameObject.SetActive(status);
         canGo = true;
     }
+   
     public void ComeToMe(RectTransform item)
     {
         
