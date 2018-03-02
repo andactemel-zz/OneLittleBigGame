@@ -10,6 +10,7 @@ TagManager:
   - UISelect
   - UISelectable
   - EventSystem
+  - ItemInventoryPanel
   layers:
   - Default
   - TransparentFX
