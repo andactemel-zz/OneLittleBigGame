@@ -11,6 +11,7 @@ public class UISelect : MonoBehaviour
     public UIController _UIController;
     public ControlMethod _ControlMethod;
     public EventSystem _EventSystem;
+    public RectTransform _FirstSelected;
 
     RectTransform selfTransform;
     Vector2 targetSize;
@@ -20,6 +21,7 @@ public class UISelect : MonoBehaviour
     float sizeAnimationSpeed;
     float moveAnimationSpeed;
     public bool go = false;
+  
 	// Use this for initialization 
 	void Start () {
         _UIController = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
@@ -32,10 +34,6 @@ public class UISelect : MonoBehaviour
         sizeAnimationSpeed = 0.1f;
         moveAnimationSpeed = 0.1f;
         _EventSystem = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<EventSystem>();
-
-
-
-
     }
   
     // Update is called once per frame
@@ -115,7 +113,7 @@ public class UISelect : MonoBehaviour
         if (!go)
         {
             MoveSelection(targetSize, targetAnchor);
-            MakeTopOfEveryThing();
+           // MakeTopOfEveryThing();
             return;
         }
         if (Mathf.Abs(targetSize.x - selfTransform.sizeDelta.x) > sizeTreshold ||
@@ -127,11 +125,12 @@ public class UISelect : MonoBehaviour
             Vector2 next_step_size = Vector2.Lerp(selfTransform.sizeDelta, targetSize, sizeAnimationSpeed);
             Vector2 next_step_anchor = Vector2.Lerp(selfTransform.anchoredPosition, targetAnchor, moveAnimationSpeed);
             MoveSelection(next_step_size, next_step_anchor);
+            
         }
         else
         {
             MoveSelection(targetSize, targetAnchor);
-            MakeTopOfEveryThing();
+            //MakeTopOfEveryThing();
             go = false;
         }
     }
@@ -143,8 +142,8 @@ public class UISelect : MonoBehaviour
    
     public void ComeToMe(RectTransform item)
     {
-        
-        RectTransform targetTransform = item.gameObject.GetComponent<RectTransform>();
+        RectTransform targetTransform = new RectTransform();
+        targetTransform = item.gameObject.GetComponent<RectTransform>();
         _ActiveItem = item;
         targetSize= new Vector2(targetTransform.rect.width, targetTransform.rect.height);
         targetAnchor = Vector2.zero;
@@ -180,32 +179,11 @@ public class UISelect : MonoBehaviour
         }
         else
         {
-            Debug.Log("dısında");
+            Debug.Log("dısında item yeri"+ item.anchoredPosition.y+"content height si"+content.rect.height);
+           
+
         }
-        /*if (RectTransformUtility.RectangleContainsScreenPoint(invContainers[c].obj.transform.GetChild(2).gameObject.GetComponent<RectTransform>(), Input.mousePosition))
-        {
-            Vector3[] corners = new Vector3[4];
-            obj.transform.GetChild(1).gameObject.GetComponent<RectTransform>().GetWorldCorners(corners);
-
-            if (RectTransformUtility.RectangleContainsScreenPoint(invContainers[c].obj.transform.GetChild(2).gameObject.GetComponent<RectTransform>(), corners[0])
-                && RectTransformUtility.RectangleContainsScreenPoint(invContainers[c].obj.transform.GetChild(2).gameObject.GetComponent<RectTransform>(), corners[1])
-                && RectTransformUtility.RectangleContainsScreenPoint(invContainers[c].obj.transform.GetChild(2).gameObject.GetComponent<RectTransform>(), corners[2])
-                && RectTransformUtility.RectangleContainsScreenPoint(invContainers[c].obj.transform.GetChild(2).gameObject.GetComponent<RectTransform>(), corners[3]))
-            {
-
-                Debug.Log("Can drop the item in ID " + c);
-                obj.transform.SetParent(invContainers[c].obj.transform.GetChild(2));
-                invContainers[c].items.Add(obj.GetComponent<InventoryItem>().item);
-                obj.GetComponent<RectTransform>().localScale = Vector2.one;
-                obj.GetComponent<RectTransform>().position = tempCoords;
-                obj.GetComponent<InventoryItem>().containerID = c;
-
-
-            }
-
-        }*/
-
-
         return false;
     }
+   
 }

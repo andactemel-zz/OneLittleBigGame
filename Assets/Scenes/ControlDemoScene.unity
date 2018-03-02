@@ -2276,7 +2276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.067, y: 0.9264538}
   m_AnchorMax: {x: 0.2758845, y: 1}
-  m_AnchoredPosition: {x: 3, y: 2.3947144}
+  m_AnchoredPosition: {x: 3, y: 2.3946533}
   m_SizeDelta: {x: 3.2000008, y: -4.8829994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574924264
@@ -3230,6 +3230,7 @@ MonoBehaviour:
   _UIController: {fileID: 0}
   _ControlMethod: {fileID: 0}
   _EventSystem: {fileID: 0}
+  _FirstSelected: {fileID: 1305097815}
   go: 0
   canGo: 1
 --- !u!225 &732627255

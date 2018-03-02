@@ -16,7 +16,7 @@ public class InventoryControl : MonoBehaviour {
 
     AttackItem _EquippedAttackItem;
     
-
+   
 
     // Use this for initialization
     void Start () {
@@ -102,6 +102,7 @@ public class InventoryControl : MonoBehaviour {
         //Waiting for update gme itself
         yield return null;
         _UISelect.MakeTopOfEveryThing();
+        _UISelect.ComeToMe(_UISelect._EventSystem.firstSelectedGameObject.GetComponent<RectTransform>());
         yield return null;
         //Takes all the items in the desired inventory slots and pass them to ui controller attack ıtem window create when any changes in the inventory
         if (Parent == AttackItem) { _UIController.AttackItem_Content.CreateItemSlots(GetItemsInTheBag(Parent)); }

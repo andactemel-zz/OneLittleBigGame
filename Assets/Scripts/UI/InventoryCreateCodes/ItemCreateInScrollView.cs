@@ -80,7 +80,8 @@ public class ItemCreateInScrollView : MonoBehaviour {
     {
         Navigation customNav = new Navigation();
         customNav.mode = Navigation.Mode.Explicit;
-        customNav.selectOnDown = transform.GetChild(child_number + columnCount).GetComponent<Selectable>();
+        if ((child_number + columnCount) <= transform.childCount - 1)
+            customNav.selectOnDown = transform.GetChild(child_number + columnCount).GetComponent<Selectable>();
         customNav.selectOnUp = transform.GetChild(child_number - columnCount).GetComponent<Selectable>();
         customNav.selectOnRight = transform.GetChild(child_number + 1).GetComponent<Selectable>();
         customNav.selectOnLeft = _Left;
@@ -88,10 +89,10 @@ public class ItemCreateInScrollView : MonoBehaviour {
     }
     void MakeUINavigationExplicitRight(int child_number)
     { 
-		int childCount = FindFirstLevelChildNumberWithTag ("ItemInventoryPanel",transform);
+		
         Navigation customNav = new Navigation();
         customNav.mode = Navigation.Mode.Explicit;
-		if((child_number + columnCount) <= childCount-1)
+		if((child_number + columnCount) <= transform.childCount - 1)
             customNav.selectOnDown = transform.GetChild(child_number + columnCount).GetComponent<Selectable>();
         customNav.selectOnUp = transform.GetChild(child_number - columnCount).GetComponent<Selectable>();
         customNav.selectOnRight = _Right;
@@ -114,44 +115,43 @@ public class ItemCreateInScrollView : MonoBehaviour {
 
     void MakeNavigationBinding()
     {
-		int childCount = FindFirstLevelChildNumberWithTag ("ItemInventoryPanel",transform);
+		
 
-		int i = 0;
-		foreach (Transform child in transform) {
+	
 		
-			int lastRowStart = (childCount / 4) * columnCount;
-			int lastRowFinish = lastRowStart + (columnCount-1);
-			if (i < columnCount)//Make First Column navigationautomatic
-			{
-				MakeUINavigationAutomatic(transform.GetChild(i).GetComponent<Button>());
-			}
-			else if(i<=lastRowFinish && i>=lastRowStart)  //Make Last Column navigationautomatic
-			{
-				MakeUINavigationAutomatic(transform.GetChild(i).GetComponent<Button>());
-			}else if(i%columnCount==0)//Make Left Side Automatic
-			{
-				MakeUINavigationExplicitLeft(i);
-			}else if (i % columnCount == 3)//Make Right Side Automatic
-			{
-				MakeUINavigationExplicitRight(i);
-			}else
-			{
-				if ((i + columnCount) > childCount - 1)
-				{
-					MakeUINavigationAutomatic(transform.GetChild(i).GetComponent<Button>());
-				}else
-				{
-					MakeUINavigationExplicitCenter(i);
-				}
-			}
-			i++;
-		
-		}
-       /* for(int i = 0; i < transform.childCount; i++)
+        for(int i = 0; i < transform.childCount; i++)
         {
-           
+            int lastRowStart = (transform.childCount / 4) * columnCount;
+            int lastRowFinish = lastRowStart + (columnCount - 1);
+            if (i < columnCount)//Make First Column navigationautomatic
+            {
+                MakeUINavigationAutomatic(transform.GetChild(i).GetComponent<Button>());
+            }
+            else if (i <= lastRowFinish && i >= lastRowStart)  //Make Last Column navigationautomatic
+            {
+                MakeUINavigationAutomatic(transform.GetChild(i).GetComponent<Button>());
+            }
+            else if (i % columnCount == 0)//Make Left Side Automatic
+            {
+                MakeUINavigationExplicitLeft(i);
+            }
+            else if (i % columnCount == 3)//Make Right Side Automatic
+            {
+                MakeUINavigationExplicitRight(i);
+            }
+            else
+            {
+                if ((i + columnCount) > transform.childCount - 1)
+                {
+                    MakeUINavigationAutomatic(transform.GetChild(i).GetComponent<Button>());
+                }
+                else
+                {
+                    MakeUINavigationExplicitCenter(i);
+                }
+            }
 
-        }*/
+        }
     }
     
 }
