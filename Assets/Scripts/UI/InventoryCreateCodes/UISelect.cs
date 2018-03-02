@@ -53,6 +53,9 @@ public class UISelect : MonoBehaviour
 	void Update () {
         AnimatedMove();
         ControlWithJoyStick();
+
+       
+
     }
     public bool canGo = true;
     IEnumerator DelayUIResponse()
@@ -179,11 +182,15 @@ public class UISelect : MonoBehaviour
         }
         else
         {
-            Debug.Log("dısında item yeri"+ item.anchoredPosition.y+"content height si"+content.rect.height);
-           
+            float max_height = content.GetChild(0).GetComponent<RectTransform>().rect.height;
+            float ItemScrollAmount = (1f)-((-1f*item.anchoredPosition.y) / (max_height-item.rect.height));
+            Debug.Log(item.anchoredPosition.y);
+            content.GetComponent<ScrollRect>().verticalNormalizedPosition = ItemScrollAmount;
 
         }
         return false;
     }
+    
+    
    
 }
