@@ -20,7 +20,15 @@ public class UISelectable : MonoBehaviour, IPointerEnterHandler, IPointerClickHa
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        UIPrimaryAction();
+
+
+
+        if (eventData.button == PointerEventData.InputButton.Left)
+            UIPrimaryAction();
+        else if (eventData.button == PointerEventData.InputButton.Middle)
+            Debug.Log("Middle click");
+        else if (eventData.button == PointerEventData.InputButton.Right)
+            UISecondaryAction();
     }
 
     void Start () {

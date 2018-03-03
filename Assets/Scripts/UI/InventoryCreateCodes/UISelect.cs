@@ -53,9 +53,6 @@ public class UISelect : MonoBehaviour
 	void Update () {
         AnimatedMove();
         ControlWithJoyStick();
-
-       
-
     }
     public bool canGo = true;
     IEnumerator DelayUIResponse()
@@ -65,19 +62,17 @@ public class UISelect : MonoBehaviour
         canGo = true;
     }
 
-    
+    void DirectionalMoveListenerController() {
 
-    void ControlWithJoyStick()
-    {
-        if (_ControlMethod.joystick&&canGo)
+        if (_ControlMethod.joystick && canGo)
         {
-           
-            if(
+
+            if (
                 Input.GetAxis("Horizontal_Pad") != 0f ||
                 Input.GetAxis("Vertical_Pad") != 0f
               )
             {
-               
+
                 if (_EventSystem.currentSelectedGameObject == null)
                 {
                     if (_ActiveItem != null)
@@ -86,27 +81,57 @@ public class UISelect : MonoBehaviour
                         _EventSystem.SetSelectedGameObject(_EventSystem.firstSelectedGameObject);
                 }
 
-                
-               if (Input.GetAxis("Horizontal_Pad") > 0f)
+
+                if (Input.GetAxis("Horizontal_Pad") > 0f)
                 {
                     //Debug.Log("Right");
-                    
+
                 }
                 else if (Input.GetAxis("Horizontal_Pad") < 0f)
                 {
                     //Debug.Log("Left");
-                }else if(Input.GetAxis("Vertical_Pad") > 0f)
+                }
+                else if (Input.GetAxis("Vertical_Pad") > 0f)
                 {
                     //Debug.Log("Up");
                 }
                 else if (Input.GetAxis("Vertical_Pad") < 0f)
                 {
-                  
+
 
                 }
                 StartCoroutine(DelayUIResponse());
             }
-           
+
+        }
+    }
+
+
+    void ControlWithJoyStick()
+    {
+        //DirectionalMoveListenerController();
+        if (_ControlMethod.joystick)
+        {
+            if (_EventSystem.currentSelectedGameObject == null)
+            {
+                if (_ActiveItem != null)
+                    _EventSystem.SetSelectedGameObject(_ActiveItem.gameObject);
+                else
+                    _EventSystem.SetSelectedGameObject(_EventSystem.firstSelectedGameObject);
+            }
+            if (_ActiveItem == null)
+            {
+                return;
+            }
+            UISelectable selected = _ActiveItem.gameObject.GetComponent<UISelectable>();
+            if (Input.GetButtonUp("Fire2_Pad"))
+            {
+                selected.UIPrimaryAction();
+            }
+            if (Input.GetButtonUp("Secondary_Action_Pad"))
+            {
+                selected.UISecondaryAction();
+            }
         }
     }
 
@@ -176,15 +201,11 @@ public class UISelect : MonoBehaviour
             && RectTransformUtility.RectangleContainsScreenPoint(content, corners[1] + new Vector3(1, -1, 0))
             && RectTransformUtility.RectangleContainsScreenPoint(content, corners[2] + new Vector3(-1, -1, 0))
             && RectTransformUtility.RectangleContainsScreenPoint(content, corners[3] + new Vector3(-1, 1, 0))
-          )
-        {
-            Debug.Log("icinde");
-        }
+          ){}
         else
         {
             float max_height = content.GetChild(0).GetComponent<RectTransform>().rect.height;
             float ItemScrollAmount = (1f)-((-1f*item.anchoredPosition.y) / (max_height-item.rect.height));
-            Debug.Log(item.anchoredPosition.y);
             content.GetComponent<ScrollRect>().verticalNormalizedPosition = ItemScrollAmount;
 
         }
