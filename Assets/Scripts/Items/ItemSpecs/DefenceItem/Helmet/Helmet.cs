@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Helmet : DefenceItem {
-
+    public Sprite HelmetOntheCharacterSprite;
     // Use this for initialization
     public override void Start()
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour {
     public GameObject MeleeItemCharacterSlot;
     public GameObject CrossBowItemCharacterSlot;
+    public GameObject HelmetItemCharacterSlot;
     void Start () {
 		
 	}

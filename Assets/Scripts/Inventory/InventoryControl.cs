@@ -15,8 +15,9 @@ public class InventoryControl : MonoBehaviour {
     Character _Character;
 
     AttackItem _EquippedAttackItem;
-    
-   
+    Helmet _EquippedHelmet;
+
+
 
     // Use this for initialization
     void Start () {
@@ -45,8 +46,33 @@ public class InventoryControl : MonoBehaviour {
         item.transform.parent.localPosition = Vector3.zero;
 
         //EquipAttackItem((AttackItem)item);
+        EquipDefenceItem((DefenceItem)item);
+       
     }
-    
+    public void EquipDefenceItem(DefenceItem item)
+    {
+        if(item is Helmet)
+        {
+            EquipHelmet((Helmet)item);
+        }
+    }
+    public void EquipHelmet(Helmet helmet)
+    {
+        UnEquipHelmet();
+        _Character.HelmetItemCharacterSlot.SetActive(true);
+        _Character.HelmetItemCharacterSlot.GetComponent<SpriteRenderer>().sprite = helmet.HelmetOntheCharacterSprite;
+        _EquippedHelmet = helmet;
+        _EquippedHelmet._equipped = true;
+    }
+   
+    public void UnEquipHelmet()
+    {
+        Debug.Log("UnEquip Helmet");
+        if (_EquippedHelmet != null) { _EquippedHelmet._equipped = false; }
+        _EquippedHelmet = null;
+        _Character.HelmetItemCharacterSlot.SetActive(false);
+    }
+  
     public void EquipAttackItem(AttackItem item)
     {
         UnEquipWeapons();
