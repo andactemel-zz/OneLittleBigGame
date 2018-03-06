@@ -19,5 +19,12 @@ public class AttackItem : Item {
 	void Update () {
 		
 	}
-  
+    public override void UIPrimaryAction()
+    {
+        Debug.Log("Item UI Primary Action Attack Item");
+        _InventoryControl.EquipAttackItem(this);
+        StartCoroutine(_InventoryControl.CallUpdateBag(_InventoryControl.AttackItem));
+
+    }
+
 }

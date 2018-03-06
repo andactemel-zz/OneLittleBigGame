@@ -46,7 +46,7 @@ public class InventoryControl : MonoBehaviour {
         item.transform.parent.localPosition = Vector3.zero;
 
         //EquipAttackItem((AttackItem)item);
-        EquipDefenceItem((DefenceItem)item);
+        //EquipDefenceItem((DefenceItem)item);
        
     }
     public void EquipDefenceItem(DefenceItem item)
@@ -123,7 +123,7 @@ public class InventoryControl : MonoBehaviour {
         }
         return Items;
     }
-    IEnumerator CallUpdateBag(Transform Parent)
+    public IEnumerator CallUpdateBag(Transform Parent)
     {
         //Waiting for update gme itself
         yield return null;

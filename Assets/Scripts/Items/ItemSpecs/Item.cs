@@ -63,7 +63,7 @@ public class Item : MonoBehaviour,OnTheGroundViewInterFace,GameUIActionInterFace
         _Interactable_Collider.enabled = interactable;
     }
     //GameUIActionInterFace
-    public void UIPrimaryAction()
+    public virtual void UIPrimaryAction()
     {
         Debug.Log("Item UI Primary Action");
     }
