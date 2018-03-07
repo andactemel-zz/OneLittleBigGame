@@ -1,4 +1,4 @@
-# ITEMS (Unique Id="item")
+# ITEMS
 ## ALL ITEMS
 ### ADDED ITEMS
 #### WEAPONS
