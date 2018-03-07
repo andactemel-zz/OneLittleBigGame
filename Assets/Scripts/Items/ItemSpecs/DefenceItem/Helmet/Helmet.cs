@@ -15,4 +15,10 @@ public class Helmet : DefenceItem {
     void Update () {
 		
 	}
+    public override void UIPrimaryAction()
+    {
+        Debug.Log("Item UI Primary Action Helmet Item");
+        _InventoryControl.EquipDefenceItem((DefenceItem)this);
+        StartCoroutine(_InventoryControl.CallUpdateBag(_InventoryControl.DefenceItem));
+    }
 }

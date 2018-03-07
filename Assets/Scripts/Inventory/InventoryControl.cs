@@ -56,13 +56,14 @@ public class InventoryControl : MonoBehaviour {
             EquipHelmet((Helmet)item);
         }
     }
-    public void EquipHelmet(Helmet helmet)
+    void EquipHelmet(Helmet helmet)
     {
         UnEquipHelmet();
         _Character.HelmetItemCharacterSlot.SetActive(true);
         _Character.HelmetItemCharacterSlot.GetComponent<SpriteRenderer>().sprite = helmet.HelmetOntheCharacterSprite;
         _EquippedHelmet = helmet;
         _EquippedHelmet._equipped = true;
+        _UIController.ChangeUIHelmetItem(helmet);
     }
    
     public void UnEquipHelmet()
@@ -71,6 +72,8 @@ public class InventoryControl : MonoBehaviour {
         if (_EquippedHelmet != null) { _EquippedHelmet._equipped = false; }
         _EquippedHelmet = null;
         _Character.HelmetItemCharacterSlot.SetActive(false);
+        _UIController.ChangeUIHelmetItem(null);
+        StartCoroutine(CallUpdateBag(DefenceItem));
     }
   
     public void EquipAttackItem(AttackItem item)
@@ -93,9 +96,10 @@ public class InventoryControl : MonoBehaviour {
           
             EquipAttackItemGeneral(_Character.CrossBowItemCharacterSlot, item);
         }
-       
+        _UIController.ChangeUIAttackItem(item);
     }
 
+   
     void EquipAttackItemGeneral(GameObject _SlotOnCharacterSprite,AttackItem _attackItem)
     {
         _SlotOnCharacterSprite.SetActive(true);
@@ -110,6 +114,8 @@ public class InventoryControl : MonoBehaviour {
         _EquippedAttackItem = null;
         _Character.MeleeItemCharacterSlot.SetActive(false);
         _Character.CrossBowItemCharacterSlot.SetActive(false);
+        _UIController.ChangeUIAttackItem(null);
+        StartCoroutine(CallUpdateBag(AttackItem));
     }
     public List<Item> GetItemsInTheBag(Transform Parent)
     {

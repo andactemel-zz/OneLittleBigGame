@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class UIController : MonoBehaviour {
     public bool _OpenedUI = false;
     public bool _OpenedGameUI = false;
@@ -11,6 +11,14 @@ public class UIController : MonoBehaviour {
     public UISelect _UISelect;
     public ItemCreateInScrollView AttackItem_Content;
     public ItemCreateInScrollView DefenceItem_Content;
+
+    public Image Attack_Item_Equipped;
+    public Sprite Default_Attack_Item_Equipped;
+
+    public Image Helmet_Item_Equipped;
+    public Sprite Default_Helmet_Item_Equipped;
+
+
     void Start () {
         _UISelect = GameObject.FindGameObjectWithTag("UISelect").GetComponent<UISelect>();
 	}
@@ -42,7 +50,25 @@ public class UIController : MonoBehaviour {
         _UISelect.SetStatus(_OpenedUI);
     }
 
-  
+    public void ChangeUIAttackItem(AttackItem attack_item)
+    {
+        if (attack_item == null)
+        {
+            Attack_Item_Equipped.sprite = Default_Attack_Item_Equipped;
+            return;
+        }
+        Attack_Item_Equipped.sprite = attack_item._Inventory_Icon;
+    }
+
+    public void ChangeUIHelmetItem(Helmet helmet_item)
+    {
+        if (helmet_item == null)
+        {
+            Helmet_Item_Equipped.sprite = Default_Helmet_Item_Equipped;
+            return;
+        }
+        Helmet_Item_Equipped.sprite = helmet_item._Inventory_Icon;
+    }
 
 
 }

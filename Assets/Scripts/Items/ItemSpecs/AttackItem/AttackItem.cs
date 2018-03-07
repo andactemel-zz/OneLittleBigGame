@@ -24,7 +24,6 @@ public class AttackItem : Item {
         Debug.Log("Item UI Primary Action Attack Item");
         _InventoryControl.EquipAttackItem(this);
         StartCoroutine(_InventoryControl.CallUpdateBag(_InventoryControl.AttackItem));
-
     }
 
 }
