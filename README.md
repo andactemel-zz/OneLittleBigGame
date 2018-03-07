@@ -11,17 +11,16 @@ This game project is a 2D Top Down(90 Degree Camera Angle) Rpg Game.
 - [x] Character Rotation
 - [x] Camera Follow the Character(Basic) 
 #### 2.In-Development Mecanics
-- [ ] Character can try to arm all items
-- [ ] Character can try to eat all items
+- [ ] UI can be controlled with GamePad
 #### 3.Planned Mecanics
-- [ ] Character can try to wear all items
-- [ ] Character Can Attack Melee , Right Hand with Weapon
-- [ ] Character Can Attack Ranged, Both Hand with Weapon
 ### 2.Graphics
 #### 1.Finished Graphics
 #### 2.In-Development Graphics
 - [ ] Item interaction Window
+- [ ] GameUI
+- [ ] System UI
 #### 3.Planned Graphics
+- [ ] Map UI
 ### 3.Sounds
 #### 1.Finished Sounds
 #### 2.In-Development Sounds
@@ -37,9 +36,10 @@ This game project is a 2D Top Down(90 Degree Camera Angle) Rpg Game.
 - [ ] Character Walking Backward
 - [ ] Character Right Strafe
 - [ ] Character Left Strafe
-- [ ] Character Attack Melee , Right Hand with Weapon
+- [ ] Character Attack Sword
+- [ ] Character Attack Crossbow
 #### 3.Planned Animations
-- [ ] Character Attack Ranged , Both Hand with Weapon
+- [ ] Character Attack Bow
 ### 5.Scenario
 #### 1.Finished Scenario
 #### 2.In-Development Scenario
