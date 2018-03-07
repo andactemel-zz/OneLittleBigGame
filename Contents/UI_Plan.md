@@ -3,9 +3,7 @@
  ## 1.UI Buttons 
 | General Name  |    GamePad    |    Keyboard  | 
 | ------------- | ------------- | -------------
-| Select        |        A      |      SPACE   |
+| Primary Action  |        A      |      Left Click   |
 | Dismiss      |        B      |      ESC     |
-| Attack | X | Left Mouse Button |
-
-## 2.UI Windows
+| Secondary Action | Y | Right Click |
 
