@@ -137,8 +137,17 @@ public class InventoryControl : MonoBehaviour {
         _UISelect.ComeToMe(_UISelect._EventSystem.firstSelectedGameObject.GetComponent<RectTransform>());
         yield return null;
         //Takes all the items in the desired inventory slots and pass them to ui controller attack ıtem window create when any changes in the inventory
-        if (Parent == AttackItem) { _UIController.AttackItem_Content.CreateItemSlots(GetItemsInTheBag(Parent)); }
-        if (Parent == DefenceItem) { _UIController.DefenceItem_Content.CreateItemSlots(GetItemsInTheBag(Parent)); }
+        if (Parent == AttackItem) {
+            _UIController.AttackItem_Content.CreateItemSlots(GetItemsInTheBag(Parent));
+            yield return null;
+            _UIController.AttackItem_Content.MakeNavigationBinding();
+        }
+        if (Parent == DefenceItem) {
+            _UIController.DefenceItem_Content.CreateItemSlots(GetItemsInTheBag(Parent));
+            yield return null;
+            _UIController.DefenceItem_Content.MakeNavigationBinding();
+        }
+
 
     }
     Transform DetermineInventorySlot(Item item)

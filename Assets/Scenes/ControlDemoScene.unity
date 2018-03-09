@@ -376,12 +376,12 @@ GameObject:
   - component: {fileID: 36813907}
   - component: {fileID: 36813906}
   m_Layer: 5
-  m_Name: Pane
+  m_Name: DefenceItemPane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &36813905
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2053,8 +2053,10 @@ MonoBehaviour:
   SlotItem: {fileID: 1458811276682630, guid: b61b4836830449b4887bf9451aad75c5, type: 2}
   _UISelect: {fileID: 0}
   columnCount: 4
-  _Left: {fileID: 574924264}
-  _Right: {fileID: 1135806236}
+  _Left: {fileID: 0}
+  _Right: {fileID: 891913861}
+  _Up: {fileID: 574924264}
+  _Down: {fileID: 0}
 --- !u!1 &368941348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2534,6 +2536,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1476361533}
+        m_MethodName: SetItselActiceAllInactiveForInventory
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 867192160}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4117,7 +4130,7 @@ GameObject:
   - component: {fileID: 867192163}
   - component: {fileID: 867192162}
   m_Layer: 5
-  m_Name: Pane
+  m_Name: AttackItemPane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4263,8 +4276,8 @@ GameObject:
   - component: {fileID: 891913860}
   - component: {fileID: 891913863}
   - component: {fileID: 891913862}
-  - component: {fileID: 891913861}
   - component: {fileID: 891913864}
+  - component: {fileID: 891913861}
   m_Layer: 5
   m_Name: AttackItemPanel
   m_TagString: Untagged
@@ -4299,12 +4312,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 891913859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6511d2064c57c3c4283a678f1c6ac454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 105204128}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -4325,7 +4338,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 891913862}
   m_OnClick:
     m_PersistentCalls:
@@ -4343,6 +4356,10 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  upSelectable: {fileID: 0}
+  downSelectable: {fileID: 0}
+  leftSelectable: {fileID: 0}
+  rightSelectable: {fileID: 105204128}
 --- !u!114 &891913862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4355,15 +4372,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2463f47e092867a4baed2884f1c32cb7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6081,6 +6098,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1476361533}
+        m_MethodName: SetItselActiceAllInactiveForInventory
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 36813904}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1135806237
@@ -6480,7 +6508,9 @@ MonoBehaviour:
   _UISelect: {fileID: 0}
   columnCount: 4
   _Left: {fileID: 0}
-  _Right: {fileID: 0}
+  _Right: {fileID: 891913861}
+  _Up: {fileID: 1135806236}
+  _Down: {fileID: 0}
 --- !u!114 &1194566617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7767,6 +7797,9 @@ MonoBehaviour:
   Helmet_Item_Equipped: {fileID: 1461642185}
   Default_Helmet_Item_Equipped: {fileID: 21300000, guid: bc2ec60aa56666643b300f77ef793ff6,
     type: 3}
+  Panes:
+  - {fileID: 867192160}
+  - {fileID: 36813904}
 --- !u!1 &1523742708
 GameObject:
   m_ObjectHideFlags: 0

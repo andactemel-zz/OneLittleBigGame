@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour {
     public GameObject _GameUI;
     public GameObject _SystemUI;
     public UISelect _UISelect;
+
     public ItemCreateInScrollView AttackItem_Content;
     public ItemCreateInScrollView DefenceItem_Content;
 
@@ -70,5 +71,20 @@ public class UIController : MonoBehaviour {
         Helmet_Item_Equipped.sprite = helmet_item._Inventory_Icon;
     }
 
+    public GameObject[] Panes;
+   
+    public void SetItselActiceAllInactiveForInventory(GameObject clicked)
+    {
+        foreach(GameObject pane in Panes)
+        {
+            if (pane.Equals(clicked))
+            {
+                pane.SetActive(true);
+            }else
+            {
+                pane.SetActive(false);
+            }
+        }
+    }
 
 }

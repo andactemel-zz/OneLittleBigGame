@@ -10,25 +10,21 @@ public class ItemCreateInScrollView : MonoBehaviour {
     public int columnCount;
     public Selectable _Left;
     public Selectable _Right;
+	public Selectable _Up;
+	public Selectable _Down;
+
     // Use this for initialization
     void Start () {
-        // CreateItemSlots(null);
-        columnCount = 4;
     }
-	
 	// Update is called once per frame
 	void Update () {
-        
-
     }
 
     public void ClearSlots()
     {
         for(int i = 0; i < transform.childCount; i++)
         {
-
             Destroy( transform.GetChild(i).gameObject);
-
         }
     }
     public void CreateItemSlots(List<Item> Items)
@@ -36,10 +32,7 @@ public class ItemCreateInScrollView : MonoBehaviour {
        
         ClearSlots();
         RectTransform ContentRect = GetComponent<RectTransform>();
-
         int itemCount = Items.Count;
-        
-        int columnCount = 4;
         float width_Item = ContentRect.rect.width / (float)columnCount;
         float height_Item = width_Item;
         float row_Count = ((itemCount / columnCount) + 1);
@@ -55,103 +48,51 @@ public class ItemCreateInScrollView : MonoBehaviour {
             item.GetComponent<UISelectable>()._Item = Items[i];
             if (Items[i]._Inventory_Icon != null) { item.transform.GetChild(0).GetComponent<Image>().sprite = Items[i]._Inventory_Icon; }
 
-        }  
+        }
+        
+      
     }
     void OnEnable()
     {
-        MakeNavigationBinding();
+       MakeNavigationBinding();
     }
-    void MakeUINavigationAutomatic(Button UI) {
-        Navigation customNav = new Navigation();
-        customNav.mode = Navigation.Mode.Automatic;
-        UI.navigation = customNav;
-    }
-    void MakeUINavigationExplicitCenter(int child_number)
+   public void MakeNavigationBinding()
     {
-        Navigation customNav = new Navigation();
-        customNav.mode = Navigation.Mode.Explicit;
-        customNav.selectOnDown = transform.GetChild(child_number + columnCount).GetComponent<Selectable>();
-        customNav.selectOnUp = transform.GetChild(child_number - columnCount).GetComponent<Selectable>();
-        customNav.selectOnRight = transform.GetChild(child_number + 1).GetComponent<Selectable>();
-        customNav.selectOnLeft = transform.GetChild(child_number - 1).GetComponent<Selectable>();
-        transform.GetChild(child_number).GetComponent<Button>().navigation = customNav;
-    }
-    void MakeUINavigationExplicitLeft(int child_number)
-    {
-        Navigation customNav = new Navigation();
-        customNav.mode = Navigation.Mode.Explicit;
-        if ((child_number + columnCount) <= transform.childCount - 1)
-            customNav.selectOnDown = transform.GetChild(child_number + columnCount).GetComponent<Selectable>();
-        customNav.selectOnUp = transform.GetChild(child_number - columnCount).GetComponent<Selectable>();
-        customNav.selectOnRight = transform.GetChild(child_number + 1).GetComponent<Selectable>();
-        customNav.selectOnLeft = _Left;
-        transform.GetChild(child_number).GetComponent<Button>().navigation = customNav;
-    }
-    void MakeUINavigationExplicitRight(int child_number)
-    { 
-		
-        Navigation customNav = new Navigation();
-        customNav.mode = Navigation.Mode.Explicit;
-		if((child_number + columnCount) <= transform.childCount - 1)
-            customNav.selectOnDown = transform.GetChild(child_number + columnCount).GetComponent<Selectable>();
-        customNav.selectOnUp = transform.GetChild(child_number - columnCount).GetComponent<Selectable>();
-        customNav.selectOnRight = _Right;
-        customNav.selectOnLeft = transform.GetChild(child_number - 1).GetComponent<Selectable>();
-        transform.GetChild(child_number).GetComponent<Button>().navigation = customNav;
-    }
-	int FindFirstLevelChildNumberWithTag(string tag,Transform parent){
-
-
-		int childCount = 0;
-
-		foreach (Transform child in parent) {
-			if (child.gameObject.CompareTag(tag)) {
-				childCount++;
-			}
-		}
-		return childCount;
-	}
-
-
-    void MakeNavigationBinding()
-    {
-		
-
-	
-		
         for(int i = 0; i < transform.childCount; i++)
         {
-            int lastRowStart = (transform.childCount / 4) * columnCount;
-            int lastRowFinish = lastRowStart + (columnCount - 1);
-            if (i < columnCount)//Make First Column navigationautomatic
-            {
-                MakeUINavigationAutomatic(transform.GetChild(i).GetComponent<Button>());
-            }
-            else if (i <= lastRowFinish && i >= lastRowStart)  //Make Last Column navigationautomatic
-            {
-                MakeUINavigationAutomatic(transform.GetChild(i).GetComponent<Button>());
-            }
-            else if (i % columnCount == 0)//Make Left Side Automatic
-            {
-                MakeUINavigationExplicitLeft(i);
-            }
-            else if (i % columnCount == 3)//Make Right Side Automatic
-            {
-                MakeUINavigationExplicitRight(i);
-            }
-            else
-            {
-                if ((i + columnCount) > transform.childCount - 1)
-                {
-                    MakeUINavigationAutomatic(transform.GetChild(i).GetComponent<Button>());
-                }
-                else
-                {
-                    MakeUINavigationExplicitCenter(i);
-                }
-            }
+			Navigation customNav = new Navigation();
+			customNav.mode = Navigation.Mode.Explicit;
+			//Make Up Binding
+			if ((i - columnCount) < 0) {
+				customNav.selectOnUp = _Up;
+			} else {
+				customNav.selectOnUp = transform.GetChild (i - columnCount).GetComponent<Button> ();
+			}
+			//Make Right Binding
+			if ((i + 1) >= transform.childCount || i%columnCount==3) {
+				customNav.selectOnRight = _Right;
+			} else {
+				
+				customNav.selectOnRight = transform.GetChild (i + 1).GetComponent<Button> ();
+			}
+			//Make Down Binding
+			if ((i + columnCount) < transform.childCount) {
+				customNav.selectOnDown = transform.GetChild (i + columnCount).GetComponent<Button> ();
+			} else {
+				customNav.selectOnDown = _Down;
+			}
 
+			//Make Left Binding
+
+			if (i-1 < 0 || (i)%columnCount==0) {
+				customNav.selectOnLeft = _Left;
+			} else {
+				customNav.selectOnLeft = transform.GetChild (i - 1).GetComponent<Button> ();
+			}
+			transform.GetChild(i).GetComponent<Button>().navigation = customNav;
         }
     }
+
+
     
 }
