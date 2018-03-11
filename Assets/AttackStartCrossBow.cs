@@ -2,18 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackStart : StateMachineBehaviour {
+public class AttackStartCrossBow : StateMachineBehaviour {
 
-
-    public BoxCollider2D MeleeWeaponBoxCollider;
-	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
         animator.speed = animator.GetFloat("AttackSpeed");
-        MeleeWeaponBoxCollider = GameObject.FindGameObjectWithTag("MeleeWeapon").GetComponent<BoxCollider2D>();
-        MeleeWeaponBoxCollider.enabled = false;
-
-
-
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -26,8 +20,6 @@ public class AttackStart : StateMachineBehaviour {
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.speed = animator.GetFloat("AttackSpeed");
-        MeleeWeaponBoxCollider.enabled = true;
-
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here

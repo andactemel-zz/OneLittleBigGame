@@ -11,6 +11,8 @@ TagManager:
   - UISelectable
   - EventSystem
   - ItemInventoryPanel
+  - MeleeWeapon
+  - RangedWeapon
   layers:
   - Default
   - TransparentFX
